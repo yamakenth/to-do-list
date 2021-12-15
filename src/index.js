@@ -11,3 +11,6 @@ createAddButton(addButton);
 
 const display = document.querySelector('.display');
 createDisplay(display);
+
+const add = document.querySelector('.add-button button');
+add.addEventListener('click', () => console.log('clicked'));

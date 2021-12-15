@@ -34,5 +34,6 @@ const toDoList = new ToDoList();
 toDoList.addNewItemToList('wash car', 'chores', 'wash then wax car', '2021-12-17', 'low');
 toDoList.addNewItemToList('buy groceries', 'chores', 'cabbage, bread, beer', '2021-12-15', 'high');
 toDoList.addNewItemToList('math assignment 3', 'school', 'problem set 1 - 6', '2021-12-23', 'med');
+toDoList.list[2].isCompleted = true;
 
 export { toDoList }

@@ -28,6 +28,7 @@ function createLeftDiv(left, currItem) {
   // check box 
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
+  checkbox.checked = currItem.isCompleted;
   // title 
   const displayTitle = document.createElement('h3');
   displayTitle.textContent = currItem.title;
