@@ -1,6 +1,11 @@
+import { createHeader } from './header';
 import './style.css';
 
-console.log('yeet');
+// > body element 
+const body = document.querySelector('body');
+// >> header 
+const header = createHeader();
+body.appendChild(header);
 
 
 /*

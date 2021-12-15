@@ -11,7 +11,7 @@ body {
   flex-direction: column;
 }
 
-/*
+
 .header {
   background-color: #F41D12;
   color: #ffffff;
@@ -27,6 +27,8 @@ body {
   width: 30px;
 }
 
+
+/*
 .content {
   display: flex;
   height: 100%;
