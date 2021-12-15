@@ -121,3 +121,37 @@ body {
   opacity: 1;
   pointer-events: all;
 }
+
+.new-item-form {
+  border: 1px solid #000000;
+  position: fixed;
+  top: 50%;
+  left: 75%;
+  transform: scale(0);
+  z-index: 10;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 12px;
+  width: 260px;
+  height: 300px;
+}
+
+.new-item-form.active {
+  transform: scale(1);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}

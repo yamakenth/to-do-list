@@ -17,4 +17,6 @@ add.addEventListener('click', () => {
   console.log('clicked');
   const overlay = document.querySelector('#overlay');
   overlay.classList.add('active');
+  const form = document.querySelector('.new-item-form');
+  form.classList.add('active');
 });
