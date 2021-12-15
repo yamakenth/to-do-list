@@ -41,3 +41,31 @@ body {
   width: 75%;
   padding: 12px;
 }
+
+.to-do-item {
+  border: 1px solid #000000;
+  border-left: 5px solid #008000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+
+.to-do-item > .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.to-do-item > .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
