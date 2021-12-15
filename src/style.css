@@ -27,6 +27,42 @@ body {
   width: 30px;
 }
 
+.display {
+  padding: 12px;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.item {
+  border: 1px solid #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 12px;
+  margin-bottom: 12px;
+}
+
+.item > .left-container,
+.item > .right-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item .icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.item button {
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*
 .content {
   display: flex;
@@ -39,20 +75,6 @@ body {
   width: 25%;
 }
 
-.display {
-  width: 75%;
-  padding: 12px;
-}
-
-.to-do-item {
-  border: 1px solid #000000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px;
-  margin-bottom: 12px;
-}
-
 .priority-low {
   border-left: 5px solid #008000;
 }
@@ -63,25 +85,6 @@ body {
 
 .priority-high {
   border-left: 5px solid #cf0000;
-}
-
-
-.to-do-item > .left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.to-do-item > .right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
 }
 
 .add-button {

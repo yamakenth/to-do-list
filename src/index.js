@@ -1,5 +1,6 @@
 import { createHeader } from './header';
 import { ToDoItem, ToDoList } from './logic';
+import { displayCurrentList } from './display';
 import './style.css';
 
 // create new list 
@@ -17,6 +18,9 @@ const body = document.querySelector('body');
 // >> header 
 const header = createHeader();
 body.appendChild(header);
+// >> display 
+const display = displayCurrentList(toDoList);
+body.appendChild(display);
 
 
 
