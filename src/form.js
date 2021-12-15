@@ -2,13 +2,41 @@ function displayFrom() {
   // > whole page 
   const formPage = document.createElement('div');
   formPage.classList.add('form-page');
+
   // >> overlay 
   const overlay = document.createElement('div');
   overlay.id = 'overlay';
+
+  // >> new item form 
+  const newItemForm = document.createElement('div');
+  newItemForm.classList.add('new-item-form');
+
+  // >>> form header
+  // >>>> title 
+  // >>>> close button 
+  // >>>>> icon 
+  
+  // >>> form row 1
+  // >>>> title input 
+  // >>>> project input 
+  // >>> form row 2 
+  // >>>> description input 
+  // >>> form row 3 
+  // >>>> label 
+  // >>>> date input 
+  // >>> form row 4
+  // >>>> label 
+  // >>>>> priotity buttons 
+  // >>>>>> low 
+  // >>>>>> medium 
+  // >>>>>> high 
+  // >>> form row 5
+  // submit button 
+
   
   // append child to parent 
   formPage.appendChild(overlay);
-
+  formPage.appendChild(newItemForm);
   return formPage;
 }
 
