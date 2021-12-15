@@ -16,7 +16,7 @@
   \*************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  padding: 0;\\n  margin: 0;\\n  box-sizing: border-box;\\n  font-family: Arial, Helvetica, sans-serif;\\n}\\n\\nbody {\\n  height: 100vh;\\n  display: flex;\\n  flex-direction: column;\\n}\\n\\n.header {\\n  background-color: #F41D12;\\n  color: #ffffff;\\n  display: flex;\\n  padding: 12px;\\n  align-items: center;\\n  justify-content: flex-start;\\n  gap: 12px;\\n}\\n\\n.logo {\\n  height: 30px;\\n  width: 30px;\\n}\\n\\n.content {\\n  display: flex;\\n  height: 100%;\\n}\\n\\n.navbar {\\n  background-color: #f3f3f3;\\n  padding: 12px;\\n  width: 25%;\\n}\\n\\n.display {\\n  width: 75%;\\n  padding: 12px;\\n}\\n\\n.to-do-item {\\n  border: 1px solid #000000;\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n  padding: 6px;\\n  margin-bottom: 12px;\\n}\\n\\n.priority-low {\\n  border-left: 5px solid #008000;\\n}\\n\\n.priority-med {\\n  border-left: 5px solid #ffe600;\\n}\\n\\n.priority-high {\\n  border-left: 5px solid #cf0000;\\n}\\n\\n\\n.to-do-item > .left {\\n  display: flex;\\n  align-items: center;\\n  gap: 12px;\\n}\\n\\n.to-do-item > .right {\\n  display: flex;\\n  align-items: center;\\n  gap: 16px;\\n}\\n\\n.icon {\\n  width: 20px;\\n  height: 20px;\\n  cursor: pointer;\\n}\\n\\n.add-button {\\n  position: fixed;\\n  bottom: 24px;\\n  right: 24px;\\n  height: 50px;\\n  width: 50px;\\n}\\n\\n.add-button > button {\\n  background-color: #F41D12;\\n  height: 100%;\\n  width: 100%;\\n  border-radius: 50%;\\n  border: none;\\n  box-shadow: 5px 5px 12px #00000040;\\n  padding: 12px;\\n  cursor: pointer;\\n}\\n\\n.plus {\\n  height: 100%;\\n  width: 100%;\\n}\\n\\n#overlay {\\n  position: fixed;\\n  opacity: 0;\\n  top: 0;\\n  left: 0;\\n  right: 0;\\n  bottom: 0;\\n  background-color: #00000080;\\n  pointer-events: none;\\n}\\n\\n#overlay.active {\\n  opacity: 1;\\n  pointer-events: all;\\n}\\n\\n.new-item-form {\\n  border: 1px solid #000000;\\n  position: fixed;\\n  top: 50%;\\n  left: 75%;\\n  transform: scale(0);\\n  z-index: 10;\\n  background-color: #ffffff;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: stretch;\\n  justify-content: space-between;\\n  padding: 12px;\\n  width: 260px;\\n  height: 300px;\\n}\\n\\n.new-item-form.active {\\n  transform: scale(1);\\n}\\n\\n.form-header {\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n}\\n\\n.form-buttons {\\n  display: flex;\\n  justify-content: space-around;\\n  align-items: center;\\n  gap: 10px;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"* {\\n  padding: 0;\\n  margin: 0;\\n  box-sizing: border-box;\\n  font-family: Arial, Helvetica, sans-serif;\\n}\\n\\nbody {\\n  height: 100vh;\\n  display: flex;\\n  flex-direction: column;\\n}\\n\\n/*\\n.header {\\n  background-color: #F41D12;\\n  color: #ffffff;\\n  display: flex;\\n  padding: 12px;\\n  align-items: center;\\n  justify-content: flex-start;\\n  gap: 12px;\\n}\\n\\n.logo {\\n  height: 30px;\\n  width: 30px;\\n}\\n\\n.content {\\n  display: flex;\\n  height: 100%;\\n}\\n\\n.navbar {\\n  background-color: #f3f3f3;\\n  padding: 12px;\\n  width: 25%;\\n}\\n\\n.display {\\n  width: 75%;\\n  padding: 12px;\\n}\\n\\n.to-do-item {\\n  border: 1px solid #000000;\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n  padding: 6px;\\n  margin-bottom: 12px;\\n}\\n\\n.priority-low {\\n  border-left: 5px solid #008000;\\n}\\n\\n.priority-med {\\n  border-left: 5px solid #ffe600;\\n}\\n\\n.priority-high {\\n  border-left: 5px solid #cf0000;\\n}\\n\\n\\n.to-do-item > .left {\\n  display: flex;\\n  align-items: center;\\n  gap: 12px;\\n}\\n\\n.to-do-item > .right {\\n  display: flex;\\n  align-items: center;\\n  gap: 16px;\\n}\\n\\n.icon {\\n  width: 20px;\\n  height: 20px;\\n  cursor: pointer;\\n}\\n\\n.add-button {\\n  position: fixed;\\n  bottom: 24px;\\n  right: 24px;\\n  height: 50px;\\n  width: 50px;\\n}\\n\\n.add-button > button {\\n  background-color: #F41D12;\\n  height: 100%;\\n  width: 100%;\\n  border-radius: 50%;\\n  border: none;\\n  box-shadow: 5px 5px 12px #00000040;\\n  padding: 12px;\\n  cursor: pointer;\\n}\\n\\n.plus {\\n  height: 100%;\\n  width: 100%;\\n}\\n\\n#overlay {\\n  position: fixed;\\n  opacity: 0;\\n  top: 0;\\n  left: 0;\\n  right: 0;\\n  bottom: 0;\\n  background-color: #00000080;\\n  pointer-events: none;\\n}\\n\\n#overlay.active {\\n  opacity: 1;\\n  pointer-events: all;\\n}\\n\\n.new-item-form {\\n  border: 1px solid #000000;\\n  position: fixed;\\n  top: 50%;\\n  left: 75%;\\n  transform: scale(0);\\n  z-index: 10;\\n  background-color: #ffffff;\\n  display: flex;\\n  flex-direction: column;\\n  align-items: stretch;\\n  justify-content: space-between;\\n  padding: 12px;\\n  width: 260px;\\n  height: 300px;\\n}\\n\\n.new-item-form.active {\\n  transform: scale(1);\\n}\\n\\n.form-header {\\n  display: flex;\\n  justify-content: space-between;\\n  align-items: center;\\n}\\n\\n.form-buttons {\\n  display: flex;\\n  justify-content: space-around;\\n  align-items: center;\\n  gap: 10px;\\n}\\n*/\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://to-do-list/./src/style.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -110,103 +110,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/addbutton.js":
-/*!**************************!*\
-  !*** ./src/addbutton.js ***!
-  \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createAddButton\": () => (/* binding */ createAddButton)\n/* harmony export */ });\n/* harmony import */ var _plus_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./plus.png */ \"./src/plus.png\");\n\n\nfunction createAddButton(parent) {\n  const button = document.createElement('button');\n  button.type = 'button';\n  const plus = new Image();\n  plus.src = _plus_png__WEBPACK_IMPORTED_MODULE_0__;\n  plus.alt = 'plus sign to add new item';\n  plus.classList.add('plus');\n  button.appendChild(plus);\n  parent.appendChild(button);\n}\n\n\n\n/*\n<button type=\"button\">\n  <img class=\"plus\" src=\"../src/plus.png\" alt=\"plus sign to add new item\">\n</button>\n*/\n\n//# sourceURL=webpack://to-do-list/./src/addbutton.js?");
-
-/***/ }),
-
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"toDoList\": () => (/* binding */ toDoList)\n/* harmony export */ });\n// to do item \nclass ToDoItem {\n  // constructor \n  constructor(title, tag, details, dueDate, priority) {\n    this.isCompleted = false;\n    this.title = title;\n    this.tag = tag;\n    this.details = details;\n    this.dueDate = dueDate;\n    this.priority = priority;\n  }\n  // toggle complete status \n  toggleIsCompleted() {\n    (this.isCompleted) ? this.isCompleted = false : this.isCompleted = true;\n  }\n}\n\n// to do list \nclass ToDoList {\n  // constructor\n  constructor() {\n    this.list = [];\n  }\n  // create and add item to list \n  addNewItemToList(title, tag, details, dueDate, priority) {\n    const newItem = new ToDoItem(title, tag, details, dueDate, priority);\n    this.list.push(newItem);\n  }\n}\n\n// test \nconst toDoList = new ToDoList();\n\ntoDoList.addNewItemToList('wash car', 'chores', 'wash then wax car', '2021-12-17', 'low');\ntoDoList.addNewItemToList('buy groceries', 'chores', 'cabbage, bread, beer', '2021-12-15', 'high');\ntoDoList.addNewItemToList('math assignment 3', 'school', 'problem set 1 - 6', '2021-12-23', 'med');\ntoDoList.list[2].isCompleted = true;\n\n\n\n//# sourceURL=webpack://to-do-list/./src/app.js?");
-
-/***/ }),
-
-/***/ "./src/display.js":
-/*!************************!*\
-  !*** ./src/display.js ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createDisplay\": () => (/* binding */ createDisplay)\n/* harmony export */ });\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app */ \"./src/app.js\");\n/* harmony import */ var _view_details_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./view-details.png */ \"./src/view-details.png\");\n/* harmony import */ var _edit_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit.png */ \"./src/edit.png\");\n/* harmony import */ var _bin_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./bin.png */ \"./src/bin.png\");\n\n\n\n\n\nfunction createDisplay(display) {\n  for (let i = 0; i < _app__WEBPACK_IMPORTED_MODULE_0__.toDoList.list.length; i++) {\n    const currItem = _app__WEBPACK_IMPORTED_MODULE_0__.toDoList.list[i];\n    // div for one item block \n    const toDoItemDisplay = document.createElement('div');\n    toDoItemDisplay.classList.add('to-do-item');\n    // div for left side \n    const left = document.createElement('div');\n    left.classList.add('left');\n    createLeftDiv(left, currItem);\n    toDoItemDisplay.appendChild(left);\n    // div for right side \n    const right = document.createElement('div');\n    right.classList.add('right');\n    createRightDiv(right, currItem);\n    toDoItemDisplay.appendChild(right);\n    // change right border color indicating priority\n    toDoItemDisplay.classList.add(`priority-${currItem.priority}`);\n    // displayPriorityLevel(toDoItemDisplay, currItem);\n    // append item block to main div \n    display.appendChild(toDoItemDisplay);\n  }\n}\n\nfunction createLeftDiv(left, currItem) {\n  // check box \n  const checkbox = document.createElement('input');\n  checkbox.type = 'checkbox';\n  checkbox.checked = currItem.isCompleted;\n  // title \n  const displayTitle = document.createElement('h3');\n  displayTitle.textContent = currItem.title;\n  // append to left \n  left.appendChild(checkbox);\n  left.appendChild(displayTitle);\n}\n\nfunction createRightDiv(right, currItem) {\n  // due date \n  const dueDateDisplay = document.createElement('h4');\n  dueDateDisplay.textContent = currItem.dueDate;\n  // view details \n  const viewDetailsIcon = new Image();\n  viewDetailsIcon.src = _view_details_png__WEBPACK_IMPORTED_MODULE_1__;\n  viewDetailsIcon.alt = 'view details';\n  viewDetailsIcon.classList.add('icon');\n  viewDetailsIcon.classList.add('view-details');\n  // edit \n  const editIcon = new Image();\n  editIcon.src = _edit_png__WEBPACK_IMPORTED_MODULE_2__;\n  editIcon.alt = 'edit item';\n  editIcon.classList.add('icon');\n  editIcon.classList.add('edit');\n  // remove \n  const removeIcon = new Image();\n  removeIcon.src = _bin_png__WEBPACK_IMPORTED_MODULE_3__;\n  removeIcon.alt = 'remove item';\n  removeIcon.classList.add('icon');\n  removeIcon.classList.add('remove');\n  // append to right \n  right.appendChild(dueDateDisplay);\n  right.appendChild(viewDetailsIcon);\n  right.appendChild(editIcon);\n  right.appendChild(removeIcon);\n}\n\n// function displayPriorityLevel(toDoItemDisplay, currItem) {\n//   console.log('entered function.');\n//   console.log(currItem.priority);\n//   if (currItem.priority === 'high') {\n//     toDoItemDisplay.classList.add('.priority-high');\n//   } else if (currItem.priority === 'low') {\n//     toDoItemDisplay.classList.add('.priority-low');\n//   } else {\n//     toDoItemDisplay.classList.add('.priority-med');\n//   }\n// }\n\n\n\n/*\n<div class=\"display\">\n\n  <div class=\"to-do-item\">\n    <div class=\"left\">\n      <input type=\"checkbox\">\n      <h3>Get mail</h3>\n    </div>\n    <div class=\"right\">\n      <h4 class=\"due-date\">12/15/2021</h4>\n      <img class=\"icon view-detials\" src=\"../src/view-details.png\" alt=\"view details\">\n      <img class=\"icon edit\" src=\"../src/edit.png\" alt=\"edit item\">\n      <img class=\"icon remove\" src=\"../src/bin.png\" alt=\"remove item\">\n    </div>\n  </div>\n\n</div>\n*/\n\n/*\ntoDoList.addNewItemToList('squats', 'workout', '5 x 5 100kg', '2021-12-18', 'low');\ntoDoList.list[0].toggleIsCompleted();\nconsole.log(toDoList.list);\n*/\n\n//# sourceURL=webpack://to-do-list/./src/display.js?");
-
-/***/ }),
-
-/***/ "./src/header.js":
-/*!***********************!*\
-  !*** ./src/header.js ***!
-  \***********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createHeader\": () => (/* binding */ createHeader)\n/* harmony export */ });\n/* harmony import */ var _check_box_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./check-box.png */ \"./src/check-box.png\");\n\n\nfunction createHeader(parent) {\n  // img div \n  const logo = new Image();\n  logo.src = _check_box_png__WEBPACK_IMPORTED_MODULE_0__;\n  logo.alt = 'large checkbox';\n  logo.classList.add('logo');\n  // title \n  const title = document.createElement('h1');\n  title.textContent = 'To Do List';\n  \n  // add to parent \n  parent.appendChild(logo);\n  parent.appendChild(title);\n}\n\n\n\n/*\n<img class =\"logo\" src=\"../src/check-box.png\" alt=\"large checkbox\">\n<h1>To Do List</h1>\n*/\n\n//# sourceURL=webpack://to-do-list/./src/header.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header */ \"./src/header.js\");\n/* harmony import */ var _display__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./display */ \"./src/display.js\");\n/* harmony import */ var _addbutton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addbutton */ \"./src/addbutton.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app */ \"./src/app.js\");\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\n\n\nconst header = document.querySelector('.header');\n(0,_header__WEBPACK_IMPORTED_MODULE_0__.createHeader)(header);\n\nconst addButton = document.querySelector('.add-button');\n(0,_addbutton__WEBPACK_IMPORTED_MODULE_2__.createAddButton)(addButton);\n\nconst display = document.querySelector('.display');\n(0,_display__WEBPACK_IMPORTED_MODULE_1__.createDisplay)(display);\n\nconst overlay = document.querySelector('#overlay');\nconst form = document.querySelector('.new-item-form');\nconst add = document.querySelector('.add-button button');\nadd.addEventListener('click', () => {\n  overlay.classList.add('active');\n  form.classList.add('active');\n});\n\nconst closeButtons = document.querySelectorAll('.form-close');\ncloseButtons.forEach((button) => {\n  button.addEventListener('click', () => {\n    overlay.classList.remove('active');\n    form.classList.remove('active');\n  });\n});\n\nconst newTitle = document.querySelector(\"#new-title\");\nconst newDetails = document.querySelector(\"#new-details\");\nconst newDueDate = document.querySelector(\"#new-due-date\");\nconst newPriority = document.querySelector(\"#new-priority\");\nform.addEventListener('submit', (e) => {\n  e.preventDefault();\n  const newTitleValue = newTitle.value;\n  newTitle.value = '';\n\n  const newDetailsValue = newDetails.value;\n  newDetails.value = '';\n\n  const newDueDateValue = newDueDate.value;\n  newDueDate.value = '';\n\n  const newPriorityValue = newPriority.value;\n  newPriority.value = '';\n\n  overlay.classList.remove('active');\n  form.classList.remove('active');\n\n  _app__WEBPACK_IMPORTED_MODULE_3__.toDoList.addNewItemToList(newTitleValue, 'tag', newDetailsValue, newDueDateValue, \"med\");\n  console.log(_app__WEBPACK_IMPORTED_MODULE_3__.toDoList.list);\n});\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/bin.png":
-/*!*********************!*\
-  !*** ./src/bin.png ***!
-  \*********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"a6fd29509719f079bfd7.png\";\n\n//# sourceURL=webpack://to-do-list/./src/bin.png?");
-
-/***/ }),
-
-/***/ "./src/check-box.png":
-/*!***************************!*\
-  !*** ./src/check-box.png ***!
-  \***************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"49bf807ccf0d91b241a3.png\";\n\n//# sourceURL=webpack://to-do-list/./src/check-box.png?");
-
-/***/ }),
-
-/***/ "./src/edit.png":
-/*!**********************!*\
-  !*** ./src/edit.png ***!
-  \**********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"5de789ef28d13ef0b6ba.png\";\n\n//# sourceURL=webpack://to-do-list/./src/edit.png?");
-
-/***/ }),
-
-/***/ "./src/plus.png":
-/*!**********************!*\
-  !*** ./src/plus.png ***!
-  \**********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"efbf85187797e00d1c7a.png\";\n\n//# sourceURL=webpack://to-do-list/./src/plus.png?");
-
-/***/ }),
-
-/***/ "./src/view-details.png":
-/*!******************************!*\
-  !*** ./src/view-details.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"28f83697c278c57bfeb2.png\";\n\n//# sourceURL=webpack://to-do-list/./src/view-details.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n\n/*\nimport { createHeader } from \"./header\";\nimport { createDisplay } from \"./display\";\nimport { createAddButton } from \"./addbutton\";\nimport { toDoList } from \"./app\";\nimport './style.css';\n\nconst header = document.querySelector('.header');\ncreateHeader(header);\n\nconst addButton = document.querySelector('.add-button');\ncreateAddButton(addButton);\n\nconst display = document.querySelector('.display');\ncreateDisplay(display);\n\nconst overlay = document.querySelector('#overlay');\nconst form = document.querySelector('.new-item-form');\nconst add = document.querySelector('.add-button button');\nadd.addEventListener('click', () => {\n  overlay.classList.add('active');\n  form.classList.add('active');\n});\n\nconst closeButtons = document.querySelectorAll('.form-close');\ncloseButtons.forEach((button) => {\n  button.addEventListener('click', () => {\n    overlay.classList.remove('active');\n    form.classList.remove('active');\n  });\n});\n\nconst newTitle = document.querySelector(\"#new-title\");\nconst newDetails = document.querySelector(\"#new-details\");\nconst newDueDate = document.querySelector(\"#new-due-date\");\nconst newPriority = document.querySelector(\"#new-priority\");\nform.addEventListener('submit', (e) => {\n  e.preventDefault();\n  const newTitleValue = newTitle.value;\n  newTitle.value = '';\n\n  const newDetailsValue = newDetails.value;\n  newDetails.value = '';\n\n  const newDueDateValue = newDueDate.value;\n  newDueDate.value = '';\n\n  const newPriorityValue = newPriority.value;\n  newPriority.value = '';\n\n  overlay.classList.remove('active');\n  form.classList.remove('active');\n\n  toDoList.addNewItemToList(newTitleValue, 'tag', newDetailsValue, newDueDateValue, \"med\");\n  console.log(toDoList.list);\n});\n*/\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ })
 
@@ -261,18 +171,6 @@ eval("module.exports = __webpack_require__.p + \"28f83697c278c57bfeb2.png\";\n\n
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -287,26 +185,6 @@ eval("module.exports = __webpack_require__.p + \"28f83697c278c57bfeb2.png\";\n\n
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

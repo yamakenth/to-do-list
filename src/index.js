@@ -1,3 +1,8 @@
+import './style.css';
+
+
+
+/*
 import { createHeader } from "./header";
 import { createDisplay } from "./display";
 import { createAddButton } from "./addbutton";
@@ -53,3 +58,4 @@ form.addEventListener('submit', (e) => {
   toDoList.addNewItemToList(newTitleValue, 'tag', newDetailsValue, newDueDateValue, "med");
   console.log(toDoList.list);
 });
+*/
