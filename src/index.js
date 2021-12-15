@@ -27,15 +27,11 @@ body.appendChild(initDisplay);
 const addButton = createAddButton();
 body.appendChild(addButton);
 
+// add new item then display new list 
+addButton.addEventListener('click', () => {
+  console.log('clicked');
+});
 
-
-/*
-// test 
-const toDoList = new ToDoList();
-
-
-toDoList.list[2].isCompleted = true;
-*/ 
 
 /*
   <div class="header"></div>
