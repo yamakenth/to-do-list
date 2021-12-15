@@ -13,7 +13,7 @@ class ToDoItem {
 
 // to do list 
 class ToDoList {
-  // constructor 
+  // constructor
   constructor() {
     this.list = [];
   }
