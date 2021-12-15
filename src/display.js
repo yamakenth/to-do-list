@@ -17,6 +17,7 @@ function displayCurrentList(toDoList) {
     // >> create item container 
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item');
+    itemContainer.classList.add(`priority-${currItem.priority}`);
 
     // >>> left container 
     const leftContainer = document.createElement('div');
@@ -73,7 +74,7 @@ function displayCurrentList(toDoList) {
     rightContainer.appendChild(deleteButton);
     itemContainer.appendChild(leftContainer);
     itemContainer.appendChild(rightContainer);
-    displayContainer.appendChild(itemContainer);
+    displayContainer.appendChild(itemContainer);  
   }  
 
   return displayContainer;
