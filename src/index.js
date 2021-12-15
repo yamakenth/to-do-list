@@ -1,6 +1,7 @@
 import { createHeader } from './header';
 import { ToDoItem, ToDoList } from './logic';
 import { displayCurrentList } from './display';
+import { createAddButton } from './add-button';
 import './style.css';
 
 // create new list 
@@ -11,6 +12,7 @@ toDoList.addItemToList(item1);
 const item2 = new ToDoItem('Buy groceries', 'Chores', 'cabbage, bread, milk', '2021-12-15', 'high');
 toDoList.addItemToList(item2);
 const item3 = new ToDoItem('Math assignment 3', 'School', 'problem set 1 - 6', '2021-12-23', 'medium');
+item3.toggleIsCompleted();
 toDoList.addItemToList(item3);
 
 // > body element 
@@ -18,10 +20,12 @@ const body = document.querySelector('body');
 // >> header 
 const header = createHeader();
 body.appendChild(header);
-// >> display 
-const display = displayCurrentList(toDoList);
-body.appendChild(display);
-
+// >> initial display 
+const initDisplay = displayCurrentList(toDoList);
+body.appendChild(initDisplay);
+// >> add button 
+const addButton = createAddButton();
+body.appendChild(addButton);
 
 
 
