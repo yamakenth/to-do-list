@@ -93,6 +93,17 @@ body {
   width: 100%;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00000080;
+  pointer-events: none;
+  opacity: 1;
+  pointer-events: all;
+}
 
 /*
 .content {
@@ -106,16 +117,6 @@ body {
   width: 25%;
 }
 
-#overlay {
-  position: fixed;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #00000080;
-  pointer-events: none;
-}
 
 #overlay.active {
   opacity: 1;

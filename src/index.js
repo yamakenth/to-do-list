@@ -2,6 +2,7 @@ import { createHeader } from './header';
 import { ToDoItem, ToDoList } from './logic';
 import { displayCurrentList } from './display';
 import { createAddButton } from './add-button';
+import { displayFrom } from './form';
 import './style.css';
 
 // create new list 
@@ -30,6 +31,8 @@ body.appendChild(addButton);
 // add new item then display new list 
 addButton.addEventListener('click', () => {
   console.log('clicked');
+  const form = displayFrom();
+  body.appendChild(form);
 });
 
 
