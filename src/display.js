@@ -19,6 +19,9 @@ function createDisplay(display) {
     right.classList.add('right');
     createRightDiv(right, currItem);
     toDoItemDisplay.appendChild(right);
+    // change right border color indicating priority
+    toDoItemDisplay.classList.add(`priority-${currItem.priority}`);
+    // displayPriorityLevel(toDoItemDisplay, currItem);
     // append item block to main div 
     display.appendChild(toDoItemDisplay);
   }
@@ -65,6 +68,18 @@ function createRightDiv(right, currItem) {
   right.appendChild(editIcon);
   right.appendChild(removeIcon);
 }
+
+// function displayPriorityLevel(toDoItemDisplay, currItem) {
+//   console.log('entered function.');
+//   console.log(currItem.priority);
+//   if (currItem.priority === 'high') {
+//     toDoItemDisplay.classList.add('.priority-high');
+//   } else if (currItem.priority === 'low') {
+//     toDoItemDisplay.classList.add('.priority-low');
+//   } else {
+//     toDoItemDisplay.classList.add('.priority-med');
+//   }
+// }
 
 export { createDisplay };
 

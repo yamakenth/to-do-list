@@ -7,7 +7,7 @@ class ToDoItem {
     this.tag = tag;
     this.details = details;
     this.dueDate = dueDate;
-    this.priotity = priority;
+    this.priority = priority;
   }
   // toggle complete status 
   toggleIsCompleted() {

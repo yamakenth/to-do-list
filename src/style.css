@@ -44,13 +44,25 @@ body {
 
 .to-do-item {
   border: 1px solid #000000;
-  border-left: 5px solid #008000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 6px;
   margin-bottom: 12px;
 }
+
+.priority-low {
+  border-left: 5px solid #008000;
+}
+
+.priority-med {
+  border-left: 5px solid #ffe600;
+}
+
+.priority-high {
+  border-left: 5px solid #cf0000;
+}
+
 
 .to-do-item > .left {
   display: flex;
