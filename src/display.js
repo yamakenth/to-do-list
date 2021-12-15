@@ -6,6 +6,9 @@ import RemoveIcon from "./img/bin.png";
 const displayContainer = document.createElement('div');
 displayContainer.classList.add('display');
 
+// display current list of to do items 
+// take in current toDoList from index.js 
+// return entire display element 
 function displayCurrentList(toDoList) {
   for (let i = 0; i < toDoList.list.length; i++) { 
     // current item in list 
