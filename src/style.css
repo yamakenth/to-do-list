@@ -27,17 +27,17 @@ body {
 }
 
 .content {
-  border: 1px solid red;
   display: flex;
   height: 100%;
 }
 
 .navbar {
-  border: 1px solid red;
-  flex: 1;
+  background-color: #f3f3f3;
+  padding: 12px;
+  width: 25%;
 }
 
 .display {
-  border: 1px solid red;
-  flex: 1;
+  width: 75%;
+  padding: 12px;
 }
