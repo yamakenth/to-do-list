@@ -1,5 +1,16 @@
 import './style.css';
 
+console.log('yeet');
+
+
+/*
+  <div class="header"></div>
+    <div class="content">
+      <div class="navbar">navbar</div>
+      <div class="display"></div>
+    </div>
+  <div class="add-button"></div>
+*/
 
 
 /*
