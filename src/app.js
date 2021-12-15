@@ -38,3 +38,5 @@ const item3 = new ToDoItem('math assignment 3', 'school', 'problem set 1 - 6', '
 toDoList.addItemToList(item1);
 toDoList.addItemToList(item2);
 toDoList.addItemToList(item3);
+
+export { toDoList };

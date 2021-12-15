@@ -1,1 +1,3 @@
-console.log('webpack succesfully setup.');
+import { toDoList } from "./app";
+
+console.log(toDoList.list);
