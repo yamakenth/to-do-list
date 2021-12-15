@@ -13,4 +13,8 @@ const display = document.querySelector('.display');
 createDisplay(display);
 
 const add = document.querySelector('.add-button button');
-add.addEventListener('click', () => console.log('clicked'));
+add.addEventListener('click', () => {
+  console.log('clicked');
+  const overlay = document.querySelector('#overlay');
+  overlay.classList.add('active');
+});
