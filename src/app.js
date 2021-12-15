@@ -21,22 +21,18 @@ class ToDoList {
   constructor() {
     this.list = [];
   }
-  // add item to list 
-  addItemToList(item) {
-    this.list.push(item);
+  // create and add item to list 
+  addNewItemToList(title, tag, details, dueDate, priority) {
+    const newItem = new ToDoItem(title, tag, details, dueDate, priority);
+    this.list.push(newItem);
   }
-
 }
 
 // test 
 const toDoList = new ToDoList();
 
-const item1 = new ToDoItem('wash car', 'chores', 'wash then wax car', '2021-12-17', 'low');
-const item2 = new ToDoItem('buy groceries', 'chores', 'cabbage, bread, beer', '2021-12-15', 'high');
-const item3 = new ToDoItem('math assignment 3', 'school', 'problem set 1 - 6', '2021-12-23', 'med');
+toDoList.addNewItemToList('wash car', 'chores', 'wash then wax car', '2021-12-17', 'low');
+toDoList.addNewItemToList('buy groceries', 'chores', 'cabbage, bread, beer', '2021-12-15', 'high');
+toDoList.addNewItemToList('math assignment 3', 'school', 'problem set 1 - 6', '2021-12-23', 'med');
 
-toDoList.addItemToList(item1);
-toDoList.addItemToList(item2);
-toDoList.addItemToList(item3);
-
-export { toDoList };
+export { toDoList }

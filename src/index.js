@@ -1,8 +1,9 @@
-import { toDoList } from "./app";
 import { createHeader } from "./header";
+import { createDisplay } from "./display";
 import './style.css';
 
 const header = document.querySelector('.header');
-header.appendChild(createHeader(header));
+createHeader(header);
 
-console.log(toDoList.list);
+const display = document.querySelector('.display');
+createDisplay(display);
