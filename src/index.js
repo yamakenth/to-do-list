@@ -6,6 +6,7 @@ import { addFormDisplayControl } from './form-control';
 import { displayCurrentList } from './display';
 import { addToggleControl } from './toggle-control';
 import { addSubmissionControl } from './submission-control';
+import { addEditability } from './edit-control';
 import './style.css';
 
 // create new list 
@@ -47,3 +48,6 @@ addSubmissionControl(document, toDoList);
 
 // add ability to open and close form
 addFormDisplayControl(document);
+
+// add ability to edit existing item 
+addEditability(document, toDoList);

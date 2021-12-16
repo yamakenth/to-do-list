@@ -25,6 +25,9 @@ class ToDoList {
   addItemToList(item) {
     this.list.push(item);
   }
+  removeItemFromList(index) {
+    this.list.splice(index, 1);
+  }
 }
 
 export { ToDoItem, ToDoList };

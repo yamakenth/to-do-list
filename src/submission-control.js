@@ -1,6 +1,7 @@
 import { ToDoItem } from './logic';
 import { displayCurrentList } from './display';
 import { addToggleControl } from './toggle-control';
+import { addEditability } from './edit-control';
 
 // add ability to update list with new item and display new list 
 // take in document 
@@ -16,6 +17,7 @@ function addSubmissionControl(document, toDoList) {
     clearDisplay();
     updateDisplay(toDoList);
     addToggleControl(document, toDoList);
+    addEditability(document, toDoList);
   }); 
 }
 
@@ -49,4 +51,4 @@ function updateDisplay(toDoList) {
   document.querySelector('body').appendChild(currDisplay);
 }
 
-export { addSubmissionControl };
+export { addSubmissionControl, clearDisplay, updateDisplay };
