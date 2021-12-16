@@ -101,6 +101,10 @@ body {
   bottom: 0;
   background-color: #00000080;
   pointer-events: none;
+  opacity: 0;
+}
+
+#overlay.active {
   opacity: 1;
   pointer-events: all;
 }
@@ -110,7 +114,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
   z-index: 10;
   background-color: #ffffff;
   display: flex;
@@ -121,6 +125,79 @@ body {
   width: 460px;
   height: 300px;
 }
+
+.new-item-form.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.form-header img {
+  height: 16px;
+  width: 16px;
+}
+
+.new-item-form input,
+.new-item-form textarea {
+  padding: 2px 6px;
+}
+
+.form-row-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-row-1 #new-title {
+  flex: 1;
+}
+
+.form-row-2 #new-description {
+  width: 100%;
+}
+
+.form-row-3,
+.form-row-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.form-row-3 label,
+.form-row-4 p {
+  font-size: 14px;
+}
+
+.priority-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+
+.priority-buttons button {
+  padding: 2px 4px;
+  width: 60px;
+}
+
+.form-submit-button {
+  padding: 2px 4px;
+  width: 70px;
+  align-self: center;
+}
+
 
 /*
 .content {
@@ -138,11 +215,6 @@ body {
   transform: scale(1);
 }
 
-.form-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .form-buttons {
   display: flex;

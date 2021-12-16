@@ -27,12 +27,24 @@ body.appendChild(initDisplay);
 // >> add button 
 const addButton = createAddButton();
 body.appendChild(addButton);
+// >> new item form 
+const form = displayFrom(); 
+body.appendChild(form); 
+
 
 // add new item then display new list 
+const overlay = document.querySelector('#overlay');
+const newItemForm = document.querySelector('.new-item-form');
 addButton.addEventListener('click', () => {
-  console.log('clicked');
-  const form = displayFrom();
-  body.appendChild(form);
+  overlay.classList.add('active');
+  newItemForm.classList.add('active');
+});
+
+// add eventListner on form close button 
+const formCloseButton = document.querySelector('.close-button');
+formCloseButton.addEventListener('click', () => {
+  overlay.classList.remove('active');
+  newItemForm.classList.remove('active');
 });
 
 
