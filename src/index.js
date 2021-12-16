@@ -1,21 +1,23 @@
 import { ToDoItem, ToDoList } from './logic';
 import { createHeader } from './header';
 import { createAddButton } from './add-button';
+import { createFormPage } from './form';
 
 import { displayCurrentList } from './display';
-import { displayFrom } from './form';
 import './style.css';
 
 // create new list 
 const toDoList = new ToDoList();
 // example items 
-const item1 = new ToDoItem('Wash car', 'Chores', 'wash then wax car', '2021-12-17', 'low');
-toDoList.addItemToList(item1);
-const item2 = new ToDoItem('Buy groceries', 'Chores', 'cabbage, bread, milk', '2021-12-15', 'high');
-toDoList.addItemToList(item2);
-const item3 = new ToDoItem('Math assignment 3', 'School', 'problem set 1 - 6', '2021-12-23', 'medium');
-item3.toggleIsCompleted();
-toDoList.addItemToList(item3);
+const exampleItems = (function () {
+  const item1 = new ToDoItem('Wash car', 'Chores', 'wash then wax car', '2021-12-17', 'low');
+  toDoList.addItemToList(item1);
+  const item2 = new ToDoItem('Buy groceries', 'Chores', 'cabbage, bread, milk', '2021-12-15', 'high');
+  toDoList.addItemToList(item2);
+  const item3 = new ToDoItem('Math assignment 3', 'School', 'problem set 1 - 6', '2021-12-23', 'medium');
+  item3.toggleIsCompleted();
+  toDoList.addItemToList(item3);
+})();
 
 // > body element 
 const body = document.querySelector('body');
@@ -26,14 +28,15 @@ body.appendChild(header);
 // >> button to add new item 
 const addButton = createAddButton();
 body.appendChild(addButton);
+// >> new item form 
+const form = createFormPage(); 
+body.appendChild(form); 
+
 
 /*
 // >> initial display 
 let currDisplay = displayCurrentList(toDoList);
 body.appendChild(currDisplay);
-// >> new item form 
-const form = displayFrom(); 
-body.appendChild(form); 
 
 // add new item then display new list 
 const overlay = document.querySelector('#overlay');
