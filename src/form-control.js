@@ -1,12 +1,13 @@
 // add ability to open and close from with add button, form close button, and submit button
 // take in document 
 // return no results 
-function openAndCloseForm(document) {
+function addFormDisplayContrl(document) {
   // get element 
   const overlay = document.querySelector('#overlay');
   const newItemForm = document.querySelector('.new-item-form');
   const addButton = document.querySelector('.add-button');
   const formCloseButton = document.querySelector('.close-button');
+  const submitButton = document.querySelector('.form-submit-button');
   
   // eventListner on add button 
   addButton.addEventListener('click', () => {
@@ -17,11 +18,25 @@ function openAndCloseForm(document) {
   formCloseButton.addEventListener('click', () => {
     closeForm(overlay, newItemForm);
   });
+  formCloseButton.addEventListener('mouseenter', () => {
+    formCloseButton.classList.add('active');
+  });
+  formCloseButton.addEventListener('mouseleave', () => {
+    formCloseButton.classList.remove('active');
+  });
   
   // eventListener on form submit button 
   newItemForm.addEventListener('submit', (e) => {
     e.preventDefault();
     closeForm(overlay, newItemForm);
+  });
+
+  // on hover effect on submit button 
+  submitButton.addEventListener('mouseenter', () => {
+    submitButton.classList.add('active');
+  });
+  submitButton.addEventListener('mouseleave', () => {
+    submitButton.classList.remove('active');
   });
 }
 
@@ -54,4 +69,4 @@ function resetInputFields(newItemForm) {
   newItemForm.querySelector('#medium').checked = true;
 }
 
-export { openAndCloseForm };
+export { addFormDisplayContrl };

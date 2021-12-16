@@ -1,4 +1,5 @@
 import Close from './img/close.png';
+import Submit from './img/submit.png';
 
 // create input form covering the whole page (form + overlay)
 // take in no parameters 
@@ -178,11 +179,21 @@ function createFormRow4() {
 // take no parameters 
 // retrun <button class="form-submit-button"></button>
 function createSubmitButton() {
-  // >> submit button 
+  // > submit button 
   const submitButton = document.createElement('button');
   submitButton.type = 'submit';
   submitButton.classList.add('form-submit-button');
-  submitButton.textContent = 'Submit';
+  // >> text 
+  const text = document.createElement('p');
+  text.textContent = 'Submit';
+  // >> icon 
+  const icon = new Image();
+  icon.src = Submit;
+  icon.alt = 'submit icon';
+
+  // append child to parent 
+  submitButton.appendChild(icon);
+  submitButton.appendChild(text);
 
   return submitButton;
 }
@@ -206,6 +217,7 @@ function createRadio(id) {
   // > radio container 
   const radioContainer = document.createElement('div');
   radioContainer.classList.add('priority-radio');
+  radioContainer.classList.add(`${id}`);
   // >> label 
   const label = document.createElement('label');
   label.for = id;

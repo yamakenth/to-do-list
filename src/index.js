@@ -2,7 +2,7 @@ import { ToDoItem, ToDoList } from './logic';
 import { createHeader } from './header';
 import { createAddButton } from './add-button';
 import { createFormPage } from './form';
-import { openAndCloseForm } from './form-control';
+import { addFormDisplayContrl } from './form-control';
 
 import { displayCurrentList } from './display';
 import './style.css';
@@ -34,7 +34,10 @@ body.appendChild(addButton);
 const form = createFormPage(); 
 body.appendChild(form); 
 // add ability to open and close form
-openAndCloseForm(document);
+addFormDisplayContrl(document);
+
+// display current list 
+
 
 
 
@@ -43,14 +46,6 @@ openAndCloseForm(document);
 // >> initial display 
 let currDisplay = displayCurrentList(toDoList);
 body.appendChild(currDisplay);
-
-
-// add eventListener on form close button 
-const formCloseButton = document.querySelector('.close-button');
-formCloseButton.addEventListener('click', () => {
-  overlay.classList.remove('active');
-  newItemForm.classList.remove('active');
-});
 
 const checkBoxes = document.querySelectorAll('.item input[type="checkbox"]');
   checkBoxes.forEach((checkbox) => {
@@ -71,18 +66,10 @@ const dueDateInput = document.querySelector('#new-due-date');
 newItemForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const newTitle = titleInput.value;
-  titleInput.value = '';
   const newProject = projectInput.value;
-  projectInput.value = '';
   const newDescription = descriptionInput.value;
-  descriptionInput.value = '';
   const newDueDate = dueDateInput.value;
-  dueDateInput.value = null;
   const newPriorityInput = document.querySelector('input[name="priority"]:checked').value;
-  document.querySelector('#medium').checked = true;
-
-  overlay.classList.remove('active');
-  newItemForm.classList.remove('active');
 
   const newItem = new ToDoItem(newTitle, newProject, newDescription, newDueDate, newPriorityInput);
   toDoList.addItemToList(newItem);
