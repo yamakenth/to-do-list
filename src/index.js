@@ -1,6 +1,8 @@
 import { ToDoList } from './logic';
 import { loadData } from './load-data';
 import { createHeader } from './header';
+import { createContent } from './content';
+import { createSidebar } from './sidebar';
 import './style.css';
 
 ////////////////////////////////////////// INITIAL SETUP //////////////////////////////////////////
@@ -12,6 +14,10 @@ loadData(toDoList);
 const groupedToDoList = toDoList.groupByProject();
 // create header 
 createHeader();
+// create content area for flex 
+createContent();
+// create sidebar
+createSidebar();
 
 
 
