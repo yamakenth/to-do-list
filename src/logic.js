@@ -28,6 +28,18 @@ class ToDoList {
   removeItemFromList(index) {
     this.list.splice(index, 1);
   }
+  groupByProject() {
+    const groupedToDoLists = {};
+    for (let i = 0; i < this.list.length; i++) {
+      const currItem = this.list[i];
+      const currProject = currItem.project;
+      if (!groupedToDoLists.hasOwnProperty(currProject)) {
+        groupedToDoLists[currProject] = [];
+      }
+      groupedToDoLists[currProject].push(currItem);
+    }
+    return groupedToDoLists;
+  }
 }
 
 export { ToDoItem, ToDoList };

@@ -1,13 +1,4 @@
-import { ToDoItem, ToDoList } from './logic';
-import { createHeader } from './header';
-import { createAddButton } from './add-button';
-import { createFormPage } from './form';
-import { addFormDisplayControl } from './form-control';
-import { displayCurrentList } from './display';
-import { addToggleControl } from './toggle-control';
-import { addSubmissionControl } from './submission-control';
-import { addEditability } from './edit-control';
-import './style.css';
+import { ToDoItem, ToDoList } from "./logic";
 
 // create new list 
 const toDoList = new ToDoList();
@@ -22,32 +13,4 @@ const exampleItems = (function () {
   toDoList.addItemToList(item3);
 })();
 
-// > body element 
-const body = document.querySelector('body');
-
-// >> header 
-const header = createHeader();
-body.appendChild(header);
-
-// >> button to add new item 
-const addButton = createAddButton();
-body.appendChild(addButton);
-// >> new item form 
-const form = createFormPage(); 
-body.appendChild(form); 
-
-// display current list 
-let currDisplay = displayCurrentList(toDoList);
-body.appendChild(currDisplay);
-
-// toggle completion status 
-addToggleControl(document, toDoList);
-
-// add submission of new item 
-addSubmissionControl(document, toDoList);
-
-// add ability to open and close form
-addFormDisplayControl(document);
-
-// add ability to edit existing item 
-addEditability(document, toDoList);
+console.log(toDoList.groupByProject());
