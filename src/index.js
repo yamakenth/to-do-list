@@ -31,7 +31,6 @@ body.appendChild(addButton);
 const form = displayFrom(); 
 body.appendChild(form); 
 
-
 // add new item then display new list 
 const overlay = document.querySelector('#overlay');
 const newItemForm = document.querySelector('.new-item-form');
@@ -46,6 +45,16 @@ formCloseButton.addEventListener('click', () => {
   overlay.classList.remove('active');
   newItemForm.classList.remove('active');
 });
+
+const checkBoxes = document.querySelectorAll('.item input[type="checkbox"]');
+  checkBoxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', (e) => {
+      const index = e.target.parentNode.parentNode.dataset.indexNumber;
+      console.log(toDoList.list[index]);
+      toDoList.list[index].toggleIsCompleted();
+      console.log(toDoList.list[index]);
+    });
+  });
 
 // add eventListener on form submit 
 const titleInput = document.querySelector('#new-title');
@@ -86,4 +95,6 @@ newItemForm.addEventListener('submit', (e) => {
       console.log(toDoList.list[index]);
     });
   });
+
+
 });
