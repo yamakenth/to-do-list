@@ -20,10 +20,3 @@ function createHeader() {
 }
 
 export { createHeader };
-
-/*
-<div class="header">
-  <img class ="logo" src="../src/check-box.png" alt="large checkbox">
-  <h1>To Do List</h1>
-</div>
-*/

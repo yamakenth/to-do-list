@@ -16,9 +16,3 @@ function createAddButton() {
 }
 
 export { createAddButton };
-
-/*
-<button type="button" class="add-new-item">
-  <img src="../src/plus.png" alt="plus sign">
-</button>
-*/

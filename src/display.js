@@ -81,26 +81,3 @@ function displayCurrentList(toDoList) {
 }
 
 export { displayCurrentList };
-
-/*
-<div class="display">
-  <div class="item">
-    <div class="left-container">
-      <input type="checkbox" id="is-completed-check">
-      <h3 class="title">Get mail</h3>
-    </div>
-    <div class="right-container">
-      <h4 class="due-date">12/15/2021</h4>
-      <button type="button">
-        <img class="icon view-detials" src="../src/view-details.png" alt="view details">
-      </button>
-      <button type="button">
-        <img class="icon edit" src="../src/edit.png" alt="edit item">
-      </button>
-      <button type="button">
-        <img class="icon remove" src="../src/bin.png" alt="remove item">
-      </button>
-    </div>
-  </div>
-</div>
-*/
