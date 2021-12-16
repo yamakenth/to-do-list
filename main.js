@@ -16,7 +16,17 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logic */ \"./src/logic.js\");\n\n\n// create new list \nconst toDoList = new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoList();\n// example items \nconst exampleItems = (function () {\n  const item1 = new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoItem('Wash car', 'Chores', 'wash then wax car', '2021-12-17', 'low');\n  toDoList.addItemToList(item1);\n  const item2 = new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoItem('Buy groceries', 'Chores', 'cabbage, bread, milk', '2021-12-15', 'high');\n  toDoList.addItemToList(item2);\n  const item3 = new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoItem('Math assignment 3', 'School', 'problem set 1 - 6', '2021-12-23', 'medium');\n  item3.toggleIsCompleted();\n  toDoList.addItemToList(item3);\n})();\n\nconst groupedToDoList = toDoList.groupByProject();\nconsole.log(groupedToDoList);\nconsole.log(Object.keys(groupedToDoList));\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _logic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logic */ \"./src/logic.js\");\n/* harmony import */ var _load_data__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./load-data */ \"./src/load-data.js\");\n\n\n\n// create new list \nconst toDoList = new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoList();\n// load existing data then update toDoList \n(0,_load_data__WEBPACK_IMPORTED_MODULE_1__.loadData)(toDoList); \n\nconsole.log(toDoList);\n\n\n\n\nconst groupedToDoList = toDoList.groupByProject();\nconsole.log(groupedToDoList);\nconsole.log(Object.keys(groupedToDoList));\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/load-data.js":
+/*!**************************!*\
+  !*** ./src/load-data.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"loadData\": () => (/* binding */ loadData)\n/* harmony export */ });\n/* harmony import */ var _logic__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./logic */ \"./src/logic.js\");\n\n\n// dummy data \nconst dummy = [\n  new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoItem('Wash car', 'Chores', 'wash then wax car', '2021-12-17', 'low'),\n  new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoItem('Buy groceries', 'Chores', 'cabbage, bread, milk', '2021-12-15', 'high'),\n  new _logic__WEBPACK_IMPORTED_MODULE_0__.ToDoItem('Math assignment 3', 'School', 'problem set 1 - 6', '2021-12-23', 'medium')\n];\n\n// load then populate list \n// take in toDoList\n// return no results \nfunction loadData(toDoList) {\n  for (let i = 0; i < dummy.length; i++) {\n    toDoList.addItemToList(dummy[i]);\n    /* code below for test only */\n    if (i === 1) {\n      dummy[i].toggleIsCompleted();\n    }\n    /* code above for test only */\n  }\n}\n\n\n\n//# sourceURL=webpack://to-do-list/./src/load-data.js?");
 
 /***/ }),
 
