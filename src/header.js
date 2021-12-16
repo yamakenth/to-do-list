@@ -2,7 +2,7 @@ import Logo from './img/check-box.png';
 
 // create page header 
 // take in no parameters 
-// return <div class="header"></div>
+// return no results 
 function createHeader() {
   // > header div 
   const headerContainer = document.createElement('div');
@@ -15,11 +15,11 @@ function createHeader() {
   // >> title 
   const title = document.createElement('h1');
   title.textContent = 'To Do List';
+
   // append child to parent 
   headerContainer.appendChild(logo);
   headerContainer.appendChild(title);
-
-  return headerContainer;
+  document.querySelector('body').appendChild(headerContainer);
 }
 
 export { createHeader };
