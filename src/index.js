@@ -2,6 +2,7 @@ import { ToDoItem, ToDoList } from './logic';
 import { createHeader } from './header';
 import { createAddButton } from './add-button';
 import { createFormPage } from './form';
+import { openAndCloseForm } from './form-control';
 
 import { displayCurrentList } from './display';
 import './style.css';
@@ -25,12 +26,17 @@ const body = document.querySelector('body');
 // >> header 
 const header = createHeader();
 body.appendChild(header);
+
 // >> button to add new item 
 const addButton = createAddButton();
 body.appendChild(addButton);
 // >> new item form 
 const form = createFormPage(); 
 body.appendChild(form); 
+// add ability to open and close form
+openAndCloseForm(document);
+
+
 
 
 /*
@@ -38,13 +44,6 @@ body.appendChild(form);
 let currDisplay = displayCurrentList(toDoList);
 body.appendChild(currDisplay);
 
-// add new item then display new list 
-const overlay = document.querySelector('#overlay');
-const newItemForm = document.querySelector('.new-item-form');
-addButton.addEventListener('click', () => {
-  overlay.classList.add('active');
-  newItemForm.classList.add('active');
-});
 
 // add eventListener on form close button 
 const formCloseButton = document.querySelector('.close-button');
