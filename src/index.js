@@ -76,4 +76,14 @@ newItemForm.addEventListener('submit', (e) => {
   body.removeChild(displayDiv);
   currDisplay = displayCurrentList(toDoList);
   body.appendChild(currDisplay);
+  
+  const checkBoxes = document.querySelectorAll('.item input[type="checkbox"]');
+  checkBoxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', (e) => {
+      const index = e.target.parentNode.parentNode.dataset.indexNumber;
+      console.log(toDoList.list[index]);
+      toDoList.list[index].toggleIsCompleted();
+      console.log(toDoList.list[index]);
+    });
+  });
 });

@@ -19,6 +19,7 @@ function displayCurrentList(toDoList) {
     const itemContainer = document.createElement('div');
     itemContainer.classList.add('item');
     itemContainer.classList.add(`priority-${currItem.priority}`);
+    itemContainer.dataset.indexNumber = i;
 
     // >>> left container 
     const leftContainer = document.createElement('div');
