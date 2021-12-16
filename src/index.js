@@ -5,6 +5,7 @@ import { createFormPage } from './form';
 import { addFormDisplayControl } from './form-control';
 import { displayCurrentList } from './display';
 import { addToggleControl } from './toggle-control';
+import { addSubmissionControl } from './submission-control';
 import './style.css';
 
 // create new list 
@@ -33,8 +34,6 @@ body.appendChild(addButton);
 // >> new item form 
 const form = createFormPage(); 
 body.appendChild(form); 
-// add ability to open and close form
-addFormDisplayControl(document);
 
 // display current list 
 let currDisplay = displayCurrentList(toDoList);
@@ -43,45 +42,8 @@ body.appendChild(currDisplay);
 // toggle completion status 
 addToggleControl(document, toDoList);
 
+// add submission of new item 
+addSubmissionControl(document, toDoList);
 
-
-
-
-/*
-
-
-// add eventListener on form submit 
-const titleInput = document.querySelector('#new-title');
-const projectInput = document.querySelector('#new-project');
-const descriptionInput = document.querySelector('#new-description');
-const dueDateInput = document.querySelector('#new-due-date');
-
-newItemForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const newTitle = titleInput.value;
-  const newProject = projectInput.value;
-  const newDescription = descriptionInput.value;
-  const newDueDate = dueDateInput.value;
-  const newPriorityInput = document.querySelector('input[name="priority"]:checked').value;
-
-  const newItem = new ToDoItem(newTitle, newProject, newDescription, newDueDate, newPriorityInput);
-  toDoList.addItemToList(newItem);
-
-  const displayDiv = document.querySelector('.display');
-  body.removeChild(displayDiv);
-  currDisplay = displayCurrentList(toDoList);
-  body.appendChild(currDisplay);
-  
-  const checkBoxes = document.querySelectorAll('.item input[type="checkbox"]');
-  checkBoxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', (e) => {
-      const index = e.target.parentNode.parentNode.dataset.indexNumber;
-      console.log(toDoList.list[index]);
-      toDoList.list[index].toggleIsCompleted();
-      console.log(toDoList.list[index]);
-    });
-  });
-
-
-});
-*/
+// add ability to open and close form
+addFormDisplayControl(document);
