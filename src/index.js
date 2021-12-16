@@ -37,15 +37,12 @@ body.appendChild(form);
 addFormDisplayContrl(document);
 
 // display current list 
-
-
+let currDisplay = displayCurrentList(toDoList);
+body.appendChild(currDisplay);
 
 
 
 /*
-// >> initial display 
-let currDisplay = displayCurrentList(toDoList);
-body.appendChild(currDisplay);
 
 const checkBoxes = document.querySelectorAll('.item input[type="checkbox"]');
   checkBoxes.forEach((checkbox) => {
