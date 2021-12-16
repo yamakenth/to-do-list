@@ -22,7 +22,7 @@ function createSidebar(toDoList) {
 function createAllNav() {
   // > all nav
   const allNav = document.createElement('div');
-  allNav.classList.add('all-Navnav');
+  allNav.classList.add('all-nav');
   // >> title
   const title = document.createElement('h2');
   title.textContent = 'Summary';
