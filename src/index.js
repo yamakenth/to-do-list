@@ -1,8 +1,8 @@
 import { ToDoItem, ToDoList } from './logic';
-
 import { createHeader } from './header';
-import { displayCurrentList } from './display';
 import { createAddButton } from './add-button';
+
+import { displayCurrentList } from './display';
 import { displayFrom } from './form';
 import './style.css';
 
@@ -23,14 +23,14 @@ const body = document.querySelector('body');
 // >> header 
 const header = createHeader();
 body.appendChild(header);
+// >> button to add new item 
+const addButton = createAddButton();
+body.appendChild(addButton);
 
 /*
 // >> initial display 
 let currDisplay = displayCurrentList(toDoList);
 body.appendChild(currDisplay);
-// >> add button 
-const addButton = createAddButton();
-body.appendChild(addButton);
 // >> new item form 
 const form = displayFrom(); 
 body.appendChild(form); 

@@ -1,5 +1,8 @@
 import Plus from './img/plus.png';
 
+// create button to add new to do item 
+// take in no parameters 
+// return <div class="add-button"></div>
 function createAddButton() {
   // > button 
   const button = document.createElement('button');
