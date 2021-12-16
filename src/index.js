@@ -22,8 +22,8 @@ const body = document.querySelector('body');
 const header = createHeader();
 body.appendChild(header);
 // >> initial display 
-const initDisplay = displayCurrentList(toDoList);
-body.appendChild(initDisplay);
+let currDisplay = displayCurrentList(toDoList);
+body.appendChild(currDisplay);
 // >> add button 
 const addButton = createAddButton();
 body.appendChild(addButton);
@@ -40,22 +40,43 @@ addButton.addEventListener('click', () => {
   newItemForm.classList.add('active');
 });
 
-// add eventListner on form close button 
+// add eventListener on form close button 
 const formCloseButton = document.querySelector('.close-button');
 formCloseButton.addEventListener('click', () => {
   overlay.classList.remove('active');
   newItemForm.classList.remove('active');
 });
 
+// add eventListener on form submit 
+const titleInput = document.querySelector('#new-title');
+const projectInput = document.querySelector('#new-project');
+const descriptionInput = document.querySelector('#new-description');
+const dueDateInput = document.querySelector('#new-due-date');
 
-/*
-  <div class="header"></div>
-    <div class="content">
-      <div class="navbar">navbar</div>
-      <div class="display"></div>
-    </div>
-  <div class="add-button"></div>
-*/
+newItemForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const newTitle = titleInput.value;
+  titleInput.value = '';
+  const newProject = projectInput.value;
+  projectInput.value = '';
+  const newDescription = descriptionInput.value;
+  descriptionInput.value = '';
+  const newDueDate = dueDateInput.value;
+  dueDateInput.value = null;
+  const newPriorityInput = document.querySelector('input[name="priority"]:checked').value;
+  document.querySelector('#medium').checked = true;
+
+  overlay.classList.remove('active');
+  newItemForm.classList.remove('active');
+
+  const newItem = new ToDoItem(newTitle, newProject, newDescription, newDueDate, newPriorityInput);
+  toDoList.addItemToList(newItem);
+
+  const displayDiv = document.querySelector('.display');
+  body.removeChild(displayDiv);
+  currDisplay = displayCurrentList(toDoList);
+  body.appendChild(currDisplay);
+});
 
 
 /*

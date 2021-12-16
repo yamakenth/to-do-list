@@ -10,7 +10,7 @@ function displayFrom() {
   overlay.id = 'overlay';
 
   // >> new item form 
-  const newItemForm = document.createElement('div');
+  const newItemForm = document.createElement('form');
   newItemForm.classList.add('new-item-form');
 
   // >>> form header
@@ -59,31 +59,53 @@ function displayFrom() {
   // >>>> date input 
   const dueDateInput = document.createElement('input');
   dueDateInput.type = 'date';
-  dueDateInput.id = '#new-due-date';
+  dueDateInput.id = 'new-due-date';
   // >>> form row 4
   const row4 = document.createElement('div');
   row4.classList.add('form-row-4');
   // >>>> label 
   const priorityLabel = document.createElement('p');
   priorityLabel.textContent = 'Priority';
-  // >>>> priotity buttons 
-  const priorityButtons = document.createElement('div');
-  priorityButtons.classList.add('priority-buttons');
-  // >>>>> low 
-  const lowPriority = document.createElement('button');
-  lowPriority.name = 'priority';
-  lowPriority.value = 'low';
-  lowPriority.textContent = 'Low';
-  // >>>>> medium 
-  const mediumPriority = document.createElement('button');
-  mediumPriority.name = 'priority';
-  mediumPriority.value = 'medium';
-  mediumPriority.textContent = 'Medium';
-  // >>>>> high 
-  const highPriority = document.createElement('button');
-  highPriority.name = 'priority';
-  highPriority.value = 'high';
-  highPriority.textContent = 'High';
+  // >>>> low radio 
+  const lowRadio = document.createElement('div');
+  lowRadio.classList.add('priority-radio');
+  // >>>>> low label 
+  const lowLabel = document.createElement('label');
+  lowLabel.for = 'low';
+  lowLabel.textContent = 'Low';
+  // >>>>> low input 
+  const lowInput = document.createElement('input');
+  lowInput.type = 'radio';
+  lowInput.id = 'low';
+  lowInput.name = 'priority';
+  lowInput.value = 'low';
+  // >>>> medium radio 
+  const mediumRadio = document.createElement('div');
+  mediumRadio.classList.add('priority-radio');
+  // >>>>> medium label 
+  const mediumLabel = document.createElement('label');
+  mediumLabel.for = 'medium';
+  mediumLabel.textContent = 'Medium';
+  // >>>>> medium input 
+  const mediumInput = document.createElement('input');
+  mediumInput.type = 'radio';
+  mediumInput.id = 'medium';
+  mediumInput.name = 'priority';
+  mediumInput.value = 'medium';
+  mediumInput.checked = true;
+  // >>>> high radio 
+  const highRadio = document.createElement('div');
+  highRadio.classList.add('priority-radio');
+  // >>>>> high label 
+  const highLabel = document.createElement('label');
+  highLabel.for = 'high';
+  highLabel.textContent = 'High';
+  // >>>>> high input 
+  const highInput = document.createElement('input');
+  highInput.type = 'radio';
+  highInput.id = 'high';
+  highInput.name = 'priority';
+  highInput.value = 'high';
   // >>> submit button 
   const submitButton = document.createElement('button');
   submitButton.type = 'submit';
@@ -103,11 +125,16 @@ function displayFrom() {
   row3.appendChild(dueDateLabel);
   row3.appendChild(dueDateInput);
   newItemForm.appendChild(row3);
-  priorityButtons.appendChild(lowPriority);
-  priorityButtons.appendChild(mediumPriority);
-  priorityButtons.appendChild(highPriority);
+  highRadio.appendChild(highInput);
+  highRadio.appendChild(highLabel);
+  mediumRadio.appendChild(mediumInput);
+  mediumRadio.appendChild(mediumLabel);
+  lowRadio.appendChild(lowInput);
+  lowRadio.appendChild(lowLabel);
   row4.appendChild(priorityLabel);
-  row4.appendChild(priorityButtons);
+  row4.appendChild(highRadio);
+  row4.appendChild(mediumRadio);
+  row4.appendChild(lowRadio);
   newItemForm.appendChild(row4);
   newItemForm.appendChild(submitButton);
   formPage.appendChild(overlay);

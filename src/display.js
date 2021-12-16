@@ -2,14 +2,15 @@ import ViewDetailsIcon from "./img/view-details.png";
 import EditIcon from "./img/edit.png";
 import RemoveIcon from "./img/bin.png";
 
-// > display container below header 
-const displayContainer = document.createElement('div');
-displayContainer.classList.add('display');
-
 // display current list of to do items 
 // take in current toDoList from index.js 
 // return entire display element 
 function displayCurrentList(toDoList) {
+  
+  // > display container below header 
+  const displayContainer = document.createElement('div');
+  displayContainer.classList.add('display');
+
   for (let i = 0; i < toDoList.list.length; i++) { 
     // current item in list 
     const currItem = toDoList.list[i];
@@ -74,9 +75,8 @@ function displayCurrentList(toDoList) {
     rightContainer.appendChild(deleteButton);
     itemContainer.appendChild(leftContainer);
     itemContainer.appendChild(rightContainer);
-    displayContainer.appendChild(itemContainer);  
+    displayContainer.appendChild(itemContainer); 
   }  
-
   return displayContainer;
 }
 
