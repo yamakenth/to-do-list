@@ -1,5 +1,6 @@
-import { createHeader } from './header';
 import { ToDoItem, ToDoList } from './logic';
+
+import { createHeader } from './header';
 import { displayCurrentList } from './display';
 import { createAddButton } from './add-button';
 import { displayFrom } from './form';
@@ -18,9 +19,12 @@ toDoList.addItemToList(item3);
 
 // > body element 
 const body = document.querySelector('body');
+
 // >> header 
 const header = createHeader();
 body.appendChild(header);
+
+/*
 // >> initial display 
 let currDisplay = displayCurrentList(toDoList);
 body.appendChild(currDisplay);
@@ -98,3 +102,4 @@ newItemForm.addEventListener('submit', (e) => {
 
 
 });
+*/

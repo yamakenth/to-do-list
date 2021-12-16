@@ -1,5 +1,8 @@
 import Logo from './img/check-box.png';
 
+// create page header 
+// take in no parameters 
+// return <div class="header"></div>
 function createHeader() {
   // > header div 
   const headerContainer = document.createElement('div');
