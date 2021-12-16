@@ -2,9 +2,9 @@ import { ToDoItem, ToDoList } from './logic';
 import { createHeader } from './header';
 import { createAddButton } from './add-button';
 import { createFormPage } from './form';
-import { addFormDisplayContrl } from './form-control';
-
+import { addFormDisplayControl } from './form-control';
 import { displayCurrentList } from './display';
+import { addToggleControl } from './toggle-control';
 import './style.css';
 
 // create new list 
@@ -34,25 +34,21 @@ body.appendChild(addButton);
 const form = createFormPage(); 
 body.appendChild(form); 
 // add ability to open and close form
-addFormDisplayContrl(document);
+addFormDisplayControl(document);
 
 // display current list 
 let currDisplay = displayCurrentList(toDoList);
 body.appendChild(currDisplay);
 
+// toggle completion status 
+addToggleControl(document, toDoList);
+
+
+
 
 
 /*
 
-const checkBoxes = document.querySelectorAll('.item input[type="checkbox"]');
-  checkBoxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', (e) => {
-      const index = e.target.parentNode.parentNode.dataset.indexNumber;
-      console.log(toDoList.list[index]);
-      toDoList.list[index].toggleIsCompleted();
-      console.log(toDoList.list[index]);
-    });
-  });
 
 // add eventListener on form submit 
 const titleInput = document.querySelector('#new-title');

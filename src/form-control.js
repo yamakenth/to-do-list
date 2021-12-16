@@ -1,7 +1,7 @@
 // add ability to open and close from with add button, form close button, and submit button
 // take in document 
 // return no results 
-function addFormDisplayContrl(document) {
+function addFormDisplayControl(document) {
   // get element 
   const overlay = document.querySelector('#overlay');
   const newItemForm = document.querySelector('.new-item-form');
@@ -69,4 +69,4 @@ function resetInputFields(newItemForm) {
   newItemForm.querySelector('#medium').checked = true;
 }
 
-export { addFormDisplayContrl };
+export { addFormDisplayControl };
