@@ -40,6 +40,10 @@ class ToDoList {
     }
     return groupedToDoLists;
   }
+  getUniqueProjects() {
+    const projects = this.list.map(obj => obj.project);
+    return [...new Set(projects)];
+  }
 }
 
 export { ToDoItem, ToDoList };

@@ -10,14 +10,12 @@ import './style.css';
 const toDoList = new ToDoList();
 // load existing data then update toDoList 
 loadData(toDoList); 
-// create lists grouped by projects 
-const groupedToDoList = toDoList.groupByProject();
 // create header 
 createHeader();
 // create content area for flex 
 createContent();
 // create sidebar
-createSidebar();
+createSidebar(toDoList);
 
 
 
@@ -25,4 +23,8 @@ createSidebar();
 /*
 console.log(groupedToDoList);
 console.log(Object.keys(groupedToDoList));
+
+console.log(toDoList.list);
+console.log(toDoList.list.map(obj => obj.project));
+console.log([...new Set(toDoList.list.map(obj => obj.project))]);
 */
