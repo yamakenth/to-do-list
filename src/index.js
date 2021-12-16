@@ -1,4 +1,4 @@
-import { ToDoItem, ToDoList } from "./logic";
+import { ToDoItem, ToDoList } from './logic';
 
 // create new list 
 const toDoList = new ToDoList();
@@ -13,4 +13,6 @@ const exampleItems = (function () {
   toDoList.addItemToList(item3);
 })();
 
-console.log(toDoList.groupByProject());
+const groupedToDoList = toDoList.groupByProject();
+console.log(groupedToDoList);
+console.log(Object.keys(groupedToDoList));
