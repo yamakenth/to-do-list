@@ -5,7 +5,6 @@ import {
   addEventListenerToDeleteButton,
   addEventListenrtToCheckbox
 } from './list-display-logic';
-import { createSidebar } from './sidebar';
 
 // cretate display of current to do list 
 // take in current list 
