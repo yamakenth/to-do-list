@@ -16,8 +16,6 @@ function createFormPage() {
   formPage.appendChild(overlay);
   formPage.appendChild(form);
   document.querySelector('body').appendChild(formPage);
-
-  return formPage;
 }
 
 // create overlay 
