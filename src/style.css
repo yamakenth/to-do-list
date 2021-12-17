@@ -32,7 +32,7 @@ body {
 }
 
 .sidebar {
-  width: 200px;
+  width: 300px;
   background-color: #dadada;
   padding: 12px;
 }
@@ -73,7 +73,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 6px 12px;
-  margin: 0 20px 12px;
+  margin: 0 130px 12px;
 }
 
 .item:hover {
