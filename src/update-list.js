@@ -1,17 +1,28 @@
 import { ToDoItem } from './logic';
 
 // update toDoList.list (no display)
-// take in toDoList
+// take in toDoList, indexToUpdate(optional)
 // return no results 
-function updateList(toDoList) {
+function updateList(toDoList, indexToUpdate) {
+  // grab data in input fields 
   const newTitle = document.querySelector('#new-title').value;
   const newProject = document.querySelector('#new-project').value;
   const newDescription = document.querySelector('#new-description').value;
   const newDueDate = document.querySelector('#new-due-date').value;
   const newPriorityInput = document.querySelector('input[name="priority"]:checked').value;
-
+  // create a new item 
   const newItem = new ToDoItem(newTitle, newProject, newDescription, newDueDate, newPriorityInput);
-  toDoList.addItemToList(newItem);
+  
+  // get form submission type 
+  const submissionType = document.querySelector('.new-item-form').dataset.submissionType;
+  if (submissionType === 'add-item') {
+    toDoList.addItemToList(newItem);
+  } else if (submissionType === 'edit-item') {
+    console.log(indexToUpdate);
+    toDoList.updateItemOnList(indexToUpdate, newItem);
+  }
+
+  console.log(toDoList.list);
 }
 
 export { updateList };

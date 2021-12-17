@@ -1,14 +1,17 @@
+import { updateList } from "./update-list";
 // details button on click, show form then update if input fields are changed 
 // take in no parameters 
+
 // return no results 
 function addEventListenerToDetailsButton(toDoList) {
   const detetailButtons = document.querySelectorAll('.detail-button');
   detetailButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
-      const currItem = toDoList.list[e.target.parentNode.parentNode.parentNode.dataset.indexNumber];
+      const itemIndex = e.target.parentNode.parentNode.parentNode.dataset.indexNumber;
+      const currItem = toDoList.list[itemIndex];
       displayForm();
-      populateForm(currItem);
-      
+      populateForm(currItem, itemIndex);
+
     });
   });
 
@@ -25,7 +28,7 @@ function displayForm() {
 // populate form with data from current item 
 // take in currItem
 // return no results
-function populateForm(currItem) {
+function populateForm(currItem, itemIndex) {
   // change title and submit button text 
   document.querySelector('.form-header h3').textContent = 'Details'
   document.querySelector('.new-item-form button[type=submit] p').textContent = 'Edit';
@@ -37,6 +40,8 @@ function populateForm(currItem) {
   document.querySelector(`#${currItem.priority}`).checked = true;
   // add/change submission type of form 
   document.querySelector('.new-item-form').dataset.submissionType = 'edit-item';
+  // add index of item that opened the form 
+  document.querySelector('.new-item-form').dataset.itemIndex = itemIndex;
 }
 
 export { addEventListenerToDetailsButton };

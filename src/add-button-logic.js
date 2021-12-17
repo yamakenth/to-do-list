@@ -14,6 +14,8 @@ function addEventListenerToAddButton() {
     document.querySelector('.new-item-form button[type=submit] p').textContent = 'Submit';
     // add/change form submission type 
     document.querySelector('.new-item-form').dataset.submissionType = 'add-item';
+    // add index of item that opened the form 
+    document.querySelector('.new-item-form').dataset.itemIndex = -1;
   });
 }
 
