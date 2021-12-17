@@ -17,10 +17,9 @@ function addEventListenerToNavElement(toDoList) {
       // get to do list of selected project
       const grouopedToDoList = toDoList.groupByProject();
       const currToDoList = grouopedToDoList[projectName];
-      console.log(currToDoList);
-
-      // create display of selected project 
       
+      // create display of selected project 
+      createListDisplay(currToDoList);
     });
   });
 }
