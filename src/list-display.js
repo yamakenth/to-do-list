@@ -29,7 +29,7 @@ function createListDisplay(toDoList) {
   for (let i = 0; i < toDoList.list.length; i++) {
     const currItem = toDoList.list[i];
     // >> create item container 
-    const itemDisplay = createItemDisplay(currItem, i);
+    const itemDisplay = createItemDisplay(currItem);
     // append child to parent
     container.appendChild(itemDisplay); 
   }
@@ -52,11 +52,11 @@ function clearCurrentDisplay() {
 }
 
 // create item display for each to do item 
-// take in currItem, i
+// take in currItem
 // return <div class="item priority-{i}">...</div>
-function createItemDisplay(currItem, i) {
+function createItemDisplay(currItem) {
   // > item container
-  const itemContainer = createItemContainer(currItem, i);
+  const itemContainer = createItemContainer(currItem);
   // >> left container 
   const leftContainer = createLeftContainer(currItem);
   // >> right container 
@@ -70,13 +70,13 @@ function createItemDisplay(currItem, i) {
 }
 
 // create item container 
-// take in currItem and i
-// return <div class="item priority-{i}"></div>
-function createItemContainer(currItem, i) {
+// take in currItem
+// return <div class="item priority-{}"></div>
+function createItemContainer(currItem) {
   const itemContainer = document.createElement('div');
   itemContainer.classList.add('item');
   itemContainer.classList.add(`priority-${currItem.priority}`);
-  itemContainer.dataset.indexNumber = i;
+  itemContainer.dataset.itemId = currItem.id;
 
   return itemContainer;
 }
