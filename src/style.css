@@ -73,7 +73,12 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 6px 12px;
-  margin-bottom: 12px;
+  margin: 0 20px 12px;
+}
+
+.item:hover {
+  transform: scale(1.01);
+  box-shadow: 2px 2px #00000040;
 }
 
 .item > .left-container,
@@ -89,12 +94,23 @@ body {
   cursor: pointer;
 }
 
+.item input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+
 .item button {
   border: none;
   background: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.item button:hover {
+  background-color: #d3d3d357;
 }
 
 .priority-low {
