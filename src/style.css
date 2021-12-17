@@ -57,13 +57,14 @@ body {
   padding-left: 2px;
 }
 
-
-
-
-/*
 .display {
   padding: 12px;
-  height: 100%;
+  width: 100%;
+}
+
+.display h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .item {
@@ -107,6 +108,12 @@ body {
 .priority-high {
   border-left: 5px solid #cf0000;
 }
+
+
+/*
+
+
+
 
 .add-button {
   position: fixed;

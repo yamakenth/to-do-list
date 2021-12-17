@@ -3,6 +3,7 @@ import { loadData } from './load-data';
 import { createHeader } from './header';
 import { createContent } from './content';
 import { createSidebar } from './sidebar';
+import { createListDisplay } from './list-display';
 import './style.css';
 
 ////////////////////////////////////////// INITIAL SETUP //////////////////////////////////////////
@@ -16,6 +17,8 @@ createHeader();
 createContent();
 // create sidebar
 createSidebar(toDoList);
+// create display from loaded data 
+createListDisplay(toDoList);
 
 
 
