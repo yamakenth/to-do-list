@@ -1,10 +1,14 @@
-import ViewDetailsIcon from "./img/view-details.png";
-import RemoveIcon from "./img/bin.png";
+import ViewDetailsIcon from './img/view-details.png';
+import RemoveIcon from './img/bin.png';
+import { clearCurrentDisplay } from './list-display-logic';
 
 // cretate display of current to do list 
 // take in current list 
 // return no results 
 function createListDisplay(toDoList) {
+  // clear display before creating a new one 
+  clearCurrentDisplay();
+
   // > container
   const container = document.createElement('div');
   container.classList.add('display');
