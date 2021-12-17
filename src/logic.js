@@ -76,6 +76,16 @@ class ToDoList {
     }
     return newToDoList;
   }
+  getItemById(idForSearch) {
+    const toDoItem;
+    for (let i = 0; i < this.list.length; i++) {
+      const currItem = this.list[i];
+      if (currItem.id === idForSearch) {
+        toDoItem = currItem;
+      }
+    }
+    return toDoItem;
+  }
 }
 
 export { ToDoItem, ToDoList };
