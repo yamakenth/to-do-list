@@ -8,7 +8,6 @@ import { createAddButton } from './add-button';
 import { createFormPage } from './form';
 import './style.css';
 
-////////////////////////////////////////// INITIAL SETUP //////////////////////////////////////////
 // create new list 
 const toDoList = new ToDoList();
 // load existing data then update toDoList 
