@@ -1,16 +1,17 @@
 import { getWeek, isToday, parseISO } from 'date-fns';
 
 // individual to do item 
-// properties: isCompleted, title, project, description, dueDate, priority
+// properties: title, project, description, dueDate, priority, isCompleted, id
 // methods: toggeIsCompleted
 class ToDoItem {
   constructor(title, project, description, dueDate, priority) {
-    this.isCompleted = false;
     this.title = title;
     this.project = project;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
+    this.isCompleted = false;
+    this.id = new Date().getTime();
   }
   toggleIsCompleted() {
     (this.isCompleted) ? this.isCompleted = false : this.isCompleted = true;
