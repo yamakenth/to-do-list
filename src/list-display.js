@@ -1,3 +1,4 @@
+import { parseISO, format } from 'date-fns';
 import ViewDetailsIcon from './img/view-details.png';
 import RemoveIcon from './img/bin.png';
 import { 
@@ -113,7 +114,7 @@ function createRightContainer(currItem) {
   // >> due date 
   const dueDate = document.createElement('h4');
   dueDate.classList.add('due-date');
-  dueDate.textContent = currItem.dueDate;
+  dueDate.textContent = format(parseISO(currItem.dueDate), 'eee, MMM do');
   // >> buttons 
   const detailButton = createButton('detail', ViewDetailsIcon);
   const deleteButton = createButton('delete', RemoveIcon);

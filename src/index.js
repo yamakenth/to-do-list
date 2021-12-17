@@ -1,3 +1,4 @@
+import { getWeek, isToday, parseISO } from 'date-fns';
 import { ToDoList } from './logic';
 import { loadData } from './load-data';
 import { createHeader } from './header';
@@ -24,15 +25,3 @@ createListDisplay(toDoList);
 createAddButton();
 // create form but hide until add/details button is clicked 
 createFormPage(toDoList);
-
-
-
-
-/*
-console.log(groupedToDoList);
-console.log(Object.keys(groupedToDoList));
-
-console.log(toDoList.list);
-console.log(toDoList.list.map(obj => obj.project));
-console.log([...new Set(toDoList.list.map(obj => obj.project))]);
-*/
