@@ -37,9 +37,9 @@ class ToDoList {
       const currItem = this.list[i];
       const currProject = currItem.project;
       if (!groupedToDoLists.hasOwnProperty(currProject)) {
-        groupedToDoLists[currProject] = [];
+        groupedToDoLists[currProject] = new ToDoList();
       }
-      groupedToDoLists[currProject].push(currItem);
+      groupedToDoLists[currProject].addItemToList(currItem);
     }
     return groupedToDoLists;
   }
