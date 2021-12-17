@@ -12,8 +12,6 @@ function updateList(toDoList) {
 
   const newItem = new ToDoItem(newTitle, newProject, newDescription, newDueDate, newPriorityInput);
   toDoList.addItemToList(newItem);
-
-  console.log(toDoList);
 }
 
 export { updateList };

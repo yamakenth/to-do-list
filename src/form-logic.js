@@ -1,4 +1,5 @@
 import { updateList } from './update-list';
+import { createListDisplay } from './list-display';
 
 // close form on click 
 // take in no parameters 
@@ -19,6 +20,7 @@ function addEventListenerToSubmit(toDoList) {
     e.preventDefault();
     updateList(toDoList);
     closeForm();
+    createListDisplay(toDoList);
   });
 }
 

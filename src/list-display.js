@@ -1,6 +1,5 @@
 import ViewDetailsIcon from './img/view-details.png';
 import RemoveIcon from './img/bin.png';
-import { clearCurrentDisplay } from './list-display-logic';
 
 // cretate display of current to do list 
 // take in current list 
@@ -29,6 +28,16 @@ function createListDisplay(toDoList) {
     container.appendChild(itemDisplay); 
   }
   document.querySelector('.content').appendChild(container);
+}
+
+// clear current display 
+// take in no parameters 
+// return no results 
+function clearCurrentDisplay() {
+  const display = document.querySelector('.display');
+  if (display) {
+    document.querySelector('.content').removeChild(display);
+  }
 }
 
 // create item display for each to do item 
