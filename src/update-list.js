@@ -1,9 +1,9 @@
 import { ToDoItem } from './logic';
 
 // update toDoList.list (no display)
-// take in toDoList, indexToUpdate(optional)
+// take in toDoList, idToUpdate
 // return no results 
-function updateList(toDoList, indexToUpdate) {
+function updateList(toDoList, idToUpdate) {
   // grab data in input fields 
   const newTitle = document.querySelector('#new-title').value;
   const newProject = document.querySelector('#new-project').value;
@@ -18,7 +18,7 @@ function updateList(toDoList, indexToUpdate) {
   if (submissionType === 'add-item') {
     toDoList.addItemToList(newItem);
   } else if (submissionType === 'edit-item') {
-    toDoList.updateItemOnList(indexToUpdate, newItem);
+    toDoList.updateItemOnList(idToUpdate, newItem);
   }
 }
 
