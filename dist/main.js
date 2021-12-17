@@ -116,7 +116,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addEventListenerToAddButton\": () => (/* binding */ addEventListenerToAddButton)\n/* harmony export */ });\n// open form on click \n// take in no parameter \n// return no result \nfunction addEventListenerToAddButton() {\n  const addButton = document.querySelector('.add-button');\n  addButton.addEventListener('click', () => {\n    document.querySelector('#overlay').classList.add('active');\n    document.querySelector('.new-item-form').classList.add('active');\n  });\n}\n\n\n\n//# sourceURL=webpack://to-do-list/./src/add-button-logic.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"addEventListenerToAddButton\": () => (/* binding */ addEventListenerToAddButton)\n/* harmony export */ });\n// open form on click \n// take in no parameter \n// return no result \nfunction addEventListenerToAddButton() {\n  const addButton = document.querySelector('.add-button');\n  addButton.addEventListener('click', () => {\n    document.querySelector('#new-title').select();\n    document.querySelector('#overlay').classList.add('active');\n    document.querySelector('.new-item-form').classList.add('active');\n  });\n}\n\n\n\n//# sourceURL=webpack://to-do-list/./src/add-button-logic.js?");
 
 /***/ }),
 
