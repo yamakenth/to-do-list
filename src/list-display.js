@@ -114,7 +114,7 @@ function createRightContainer(currItem) {
   // >> due date 
   const dueDate = document.createElement('h4');
   dueDate.classList.add('due-date');
-  dueDate.textContent = format(parseISO(currItem.dueDate), 'eee, MMM do');
+  dueDate.textContent = (currItem.dueDate) ? format(parseISO(currItem.dueDate), 'eee, MMM do'): null;
   // >> buttons 
   const detailButton = createButton('detail', ViewDetailsIcon);
   const deleteButton = createButton('delete', RemoveIcon);
