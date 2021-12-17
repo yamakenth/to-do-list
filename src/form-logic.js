@@ -1,5 +1,6 @@
 import { updateList } from './update-list';
 import { createListDisplay } from './list-display';
+import { createSidebar } from './sidebar';
 
 // close form on click 
 // take in no parameters 
@@ -21,6 +22,7 @@ function addEventListenerToSubmit(toDoList) {
     updateList(toDoList, e.target.dataset.itemIndex);
     closeForm();
     createListDisplay(toDoList);
+    createSidebar(toDoList);
   });
 }
 

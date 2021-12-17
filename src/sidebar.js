@@ -4,6 +4,9 @@ import { addEventListenerToNavElement } from './sidebar-logic';
 // take in no parameters 
 // return no results 
 function createSidebar(toDoList) {
+  // clear current sidebar before creating a new one 
+  clearCurrentSidebar();
+
   // > container 
   const container = document.createElement('div');
   container.classList.add('sidebar');
@@ -15,10 +18,20 @@ function createSidebar(toDoList) {
   // append child to parent 
   container.append(allNav);
   container.append(projectNav);
-  document.querySelector('.content').appendChild(container);
+  document.querySelector('.content').prepend(container);
 
   // addEventListener to nav h3 
   addEventListenerToNavElement(toDoList);
+}
+
+// clear current sidebar 
+// take in no parameters 
+// return no results 
+function clearCurrentSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    document.querySelector('.content').removeChild(sidebar);
+  }
 }
 
 // create nav for all project
