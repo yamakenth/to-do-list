@@ -8,10 +8,10 @@ function addEventListenerToDetailsButton(toDoList) {
   const detetailButtons = document.querySelectorAll('.detail-button');
   detetailButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
-      const itemIndex = e.target.parentNode.parentNode.parentNode.dataset.indexNumber;
-      const currItem = toDoList.list[itemIndex];
+      const itemId = parseInt(e.target.parentNode.parentNode.parentNode.dataset.itemId);
+      const currItem = toDoList.getItemById(itemId);
       displayForm();
-      populateForm(currItem, itemIndex);
+      populateForm(currItem);
     });
   });
 }
@@ -27,7 +27,7 @@ function displayForm() {
 // populate form with data from current item 
 // take in currItem
 // return no results
-function populateForm(currItem, itemIndex) {
+function populateForm(currItem) {
   // change title and submit button text 
   document.querySelector('.form-header h3').textContent = 'Details'
   document.querySelector('.new-item-form button[type=submit] p').textContent = 'Edit';
@@ -39,8 +39,8 @@ function populateForm(currItem, itemIndex) {
   document.querySelector(`#${currItem.priority}`).checked = true;
   // add/change submission type of form 
   document.querySelector('.new-item-form').dataset.submissionType = 'edit-item';
-  // add index of item that opened the form 
-  document.querySelector('.new-item-form').dataset.itemIndex = itemIndex;
+  // add item id to form 
+  document.querySelector('.new-item-form').dataset.itemId = currItem.id;
 }
 
 // delete button on click 
@@ -50,8 +50,8 @@ function addEventListenerToDeleteButton(toDoList) {
   const deleteButtons = document.querySelectorAll('.delete-button');
   deleteButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
-      const itemIndex = e.target.parentNode.parentNode.parentNode.dataset.indexNumber;
-      toDoList.removeItemFromList(itemIndex);
+      const idToRemove = parseInt(e.target.parentNode.parentNode.parentNode.dataset.itemId);
+      toDoList.removeItemFromList(idToRemove);
       createListDisplay(toDoList);
       createSidebar(toDoList);
     });
@@ -67,8 +67,9 @@ function addEventListenrtToCheckbox(toDoList) {
   // toggle for each item 
   checkBoxes.forEach((checkbox) => {
     checkbox.addEventListener('change', (e) => {
-      const index = e.target.parentNode.parentNode.dataset.indexNumber;
-      toDoList.list[index].toggleIsCompleted();
+      const itemId = parseInt(e.target.parentNode.parentNode.dataset.itemId);
+      const currItem = toDoList.getItemById(itemId);
+      currItem.toggleIsCompleted();
     });
   });
 }
