@@ -28,11 +28,21 @@ class ToDoList {
   addItemToList(item) {
     this.list.push(item);
   }
-  removeItemFromList(index) {
-    this.list.splice(index, 1);
+  removeItemFromList(idToRemove) {
+    for (let i = 0; i < this.list.length; i++) {
+      let currItem = this.list[i];
+      if (currItem.id == idToRemove) {
+        this.list.splice(i, 1);
+      }
+    }
   }
-  updateItemOnList(index, item) {
-    this.list[index] = item;
+  updateItemOnList(idToUpdate, newItem) {
+    for (let i = 0; i < this.list.length; i++) {
+      let currItem = this.list[i];
+      if (currItem.id == idToUpdate) {
+        this.list[i] = newItem;
+      }
+    }
   }
   groupByProject() {
     const groupedToDoLists = {};
