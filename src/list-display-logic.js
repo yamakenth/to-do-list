@@ -11,7 +11,6 @@ function addEventListenerToDetailsButton(toDoList) {
       const currItem = toDoList.list[itemIndex];
       displayForm();
       populateForm(currItem, itemIndex);
-
     });
   });
 
