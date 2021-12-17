@@ -29,7 +29,6 @@ class ToDoList {
     this.list.splice(index, 1);
   }
   updateItemOnList(index, item) {
-    console.log(index);
     this.list[index] = item;
   }
   groupByProject() {

@@ -18,7 +18,7 @@ function addEventListenerToSubmit(toDoList) {
   const form = document.querySelector('.new-item-form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    updateList(toDoList);
+    updateList(toDoList, e.target.dataset.itemIndex);
     closeForm();
     createListDisplay(toDoList);
   });

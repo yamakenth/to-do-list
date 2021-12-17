@@ -18,11 +18,8 @@ function updateList(toDoList, indexToUpdate) {
   if (submissionType === 'add-item') {
     toDoList.addItemToList(newItem);
   } else if (submissionType === 'edit-item') {
-    console.log(indexToUpdate);
     toDoList.updateItemOnList(indexToUpdate, newItem);
   }
-
-  console.log(toDoList.list);
 }
 
 export { updateList };
