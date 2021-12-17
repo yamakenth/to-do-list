@@ -5,6 +5,7 @@ import { createContent } from './content';
 import { createSidebar } from './sidebar';
 import { createListDisplay } from './list-display';
 import { createAddButton } from './add-button';
+import { createFormPage } from './form';
 import './style.css';
 
 ////////////////////////////////////////// INITIAL SETUP //////////////////////////////////////////
@@ -22,6 +23,8 @@ createSidebar(toDoList);
 createListDisplay(toDoList);
 // create button to add new item
 createAddButton();
+// create form but hide until add/details button is clicked 
+createFormPage();
 
 
 
