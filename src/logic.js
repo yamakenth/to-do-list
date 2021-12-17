@@ -1,3 +1,5 @@
+import { getWeek, isToday, parseISO } from 'date-fns';
+
 // individual to do item 
 // properties: isCompleted, title, project, description, dueDate, priority
 // methods: toggeIsCompleted
@@ -46,6 +48,9 @@ class ToDoList {
   getUniqueProjects() {
     const projects = this.list.map(obj => obj.project);
     return [...new Set(projects)];
+  }
+  todaysToDoList() {
+    return this.list.filter(obj => isToday(parseISO(obj.dueDate)));
   }
 }
 
