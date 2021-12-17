@@ -5,7 +5,7 @@ import { addEventListenerToCloseButton, addEventListenerToSubmit } from './form-
 // create input form covering the whole page (form + overlay)
 // take in no parameters 
 // return no results  
-function createFormPage() {
+function createFormPage(toDoList) {
   // > whole page 
   const formPage = document.createElement('div');
   formPage.classList.add('form-page');
@@ -20,7 +20,7 @@ function createFormPage() {
 
   // addEventListner to buttons 
   addEventListenerToCloseButton();
-  addEventListenerToSubmit();
+  addEventListenerToSubmit(toDoList);
 }
 
 // create overlay 

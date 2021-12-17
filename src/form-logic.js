@@ -1,3 +1,5 @@
+import { updateList } from './update-list';
+
 // close form on click 
 // take in no parameters 
 // return no results 
@@ -9,14 +11,14 @@ function addEventListenerToCloseButton() {
 }
 
 // submit data and close form on submit button click 
-// take in no parameters 
+// take in toDoList 
 // return no results
-function addEventListenerToSubmit() {
+function addEventListenerToSubmit(toDoList) {
   const form = document.querySelector('.new-item-form');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    updateList(toDoList);
     closeForm();
-    
   });
 }
 

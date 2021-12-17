@@ -13,6 +13,7 @@ import './style.css';
 const toDoList = new ToDoList();
 // load existing data then update toDoList 
 loadData(toDoList); 
+console.log(toDoList);
 // create header 
 createHeader();
 // create content area for flex 
@@ -24,7 +25,7 @@ createListDisplay(toDoList);
 // create button to add new item
 createAddButton();
 // create form but hide until add/details button is clicked 
-createFormPage();
+createFormPage(toDoList);
 
 
 
