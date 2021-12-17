@@ -1,4 +1,5 @@
 import Plus from './img/plus.png';
+import { addEventListenerToAddButton } from './add-button-logic';
 
 // create button to add new to do item 
 // take in no parameters 
@@ -17,7 +18,8 @@ function createAddButton() {
   button.appendChild(plus);
   document.querySelector('body').appendChild(button);
 
-  return button;
+  // add event listener to button 
+  addEventListenerToAddButton();
 }
 
 export { createAddButton };
