@@ -125,12 +125,6 @@ body {
   border-left: 5px solid #cf0000;
 }
 
-
-/*
-
-
-
-
 .add-button {
   position: fixed;
   bottom: 24px;
@@ -149,6 +143,11 @@ body {
   height: 100%;
   width: 100%;
 }
+.add-button:hover {
+  transform: scale(1.1);
+}
+
+/*
 
 #overlay {
   position: fixed;

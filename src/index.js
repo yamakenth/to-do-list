@@ -4,6 +4,7 @@ import { createHeader } from './header';
 import { createContent } from './content';
 import { createSidebar } from './sidebar';
 import { createListDisplay } from './list-display';
+import { createAddButton } from './add-button';
 import './style.css';
 
 ////////////////////////////////////////// INITIAL SETUP //////////////////////////////////////////
@@ -19,6 +20,8 @@ createContent();
 createSidebar(toDoList);
 // create display from loaded data 
 createListDisplay(toDoList);
+// create button to add new item
+createAddButton();
 
 
 
