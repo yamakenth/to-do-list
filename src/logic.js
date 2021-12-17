@@ -50,10 +50,20 @@ class ToDoList {
     return [...new Set(projects)];
   }
   todaysToDoList() {
-    return this.list.filter(obj => isToday(parseISO(obj.dueDate)));
+    const newToDoList = new ToDoList();
+    const newArray = this.list.filter(obj => isToday(parseISO(obj.dueDate)));
+    for (let i = 0; i < newArray.length; i++) {
+      newToDoList.addItemToList(newArray[i]);
+    }
+    return newToDoList
   }
   thisWeeksToDoList() {
-    return this.list.filter(obj => getWeek(parseISO(obj.dueDate)) === getWeek(new Date()));
+    const newToDoList = new ToDoList();
+    const newArray = this.list.filter(obj => getWeek(parseISO(obj.dueDate)) === getWeek(new Date()));
+    for (let i = 0; i < newArray.length; i++) {
+      newToDoList.addItemToList(newArray[i]);
+    }
+    return newToDoList;
   }
 }
 

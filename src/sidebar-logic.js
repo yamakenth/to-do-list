@@ -11,16 +11,18 @@ function addEventListenerToNavElement(toDoList) {
       const projectName = e.target.textContent;
       
       if (projectName === 'Home') {
+        console.log(toDoList);
         createListDisplay(toDoList); 
       } else if (projectName === 'Today') {
-        
+        console.log(toDoList.todaysToDoList());
+        createListDisplay(toDoList.todaysToDoList());
       } else if (projectName === 'This Week') {
-        
+        console.log(toDoList.thisWeeksToDoList());
+        createListDisplay(toDoList.thisWeeksToDoList());
       } else {
         // get to do list of selected project
         const grouopedToDoList = toDoList.groupByProject();
         const currToDoList = grouopedToDoList[projectName];
-        
         // create display of selected project 
         createListDisplay(currToDoList);
       }
