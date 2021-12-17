@@ -26,13 +26,17 @@ function displayForm() {
 // take in currItem
 // return no results
 function populateForm(currItem) {
+  // change title and submit button text 
   document.querySelector('.form-header h3').textContent = 'Details'
+  document.querySelector('.new-item-form button[type=submit] p').textContent = 'Edit';
+  // populate fields 
   document.querySelector('#new-title').value = currItem.title;
   document.querySelector('#new-project').value = currItem.project;
   document.querySelector('#new-description').value = currItem.description;
   document.querySelector('#new-due-date').value = currItem.dueDate;
   document.querySelector(`#${currItem.priority}`).checked = true;
-  document.querySelector('.new-item-form button[type=submit] p').textContent = 'Edit';
+  // add/change submission type of form 
+  document.querySelector('.new-item-form').dataset.submissionType = 'edit-item';
 }
 
 export { addEventListenerToDetailsButton };
