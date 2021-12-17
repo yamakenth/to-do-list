@@ -52,6 +52,9 @@ class ToDoList {
   todaysToDoList() {
     return this.list.filter(obj => isToday(parseISO(obj.dueDate)));
   }
+  thisWeeksToDoList() {
+    return this.list.filter(obj => getWeek(parseISO(obj.dueDate)) === getWeek(new Date()));
+  }
 }
 
 export { ToDoItem, ToDoList };
