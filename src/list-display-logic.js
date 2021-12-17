@@ -1,4 +1,5 @@
 import { createListDisplay } from "./list-display";
+import { createSidebar } from "./sidebar";
 
 // details button on click, show form 
 // take in toDoList 
@@ -52,6 +53,7 @@ function addEventListenerToDeleteButton(toDoList) {
       const itemIndex = e.target.parentNode.parentNode.parentNode.dataset.indexNumber;
       toDoList.removeItemFromList(itemIndex);
       createListDisplay(toDoList);
+      createSidebar(toDoList);
     });
   });
 }
