@@ -1,6 +1,6 @@
 import Close from './img/close.png';
 import Submit from './img/submit.png';
-import { addEventListenerToCloseButton } from './form-logic';
+import { addEventListenerToCloseButton, addEventListenerToSubmit } from './form-logic';
 
 // create input form covering the whole page (form + overlay)
 // take in no parameters 
@@ -20,6 +20,7 @@ function createFormPage() {
 
   // addEventListner to buttons 
   addEventListenerToCloseButton();
+  addEventListenerToSubmit();
 }
 
 // create overlay 

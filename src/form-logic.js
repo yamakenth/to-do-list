@@ -4,10 +4,29 @@
 function addEventListenerToCloseButton() {
   const closeButton = document.querySelector('.close-button');
   closeButton.addEventListener('click', () => {
-    resetInputFields();
-    document.querySelector('#overlay').classList.remove('active');
-    document.querySelector('.new-item-form').classList.remove('active');
+    closeForm();
   });
+}
+
+// submit data and close form on submit button click 
+// take in no parameters 
+// return no results
+function addEventListenerToSubmit() {
+  const form = document.querySelector('.new-item-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    closeForm();
+    
+  });
+}
+
+// remove active from overlay and form classes 
+// take in overlay and form
+// return no results 
+function closeForm() {
+  resetInputFields();
+  document.querySelector('#overlay').classList.remove('active');
+  document.querySelector('.new-item-form').classList.remove('active');
 }
 
 // reset input fields for new input 
@@ -21,4 +40,7 @@ function resetInputFields() {
   document.querySelector('#medium').checked = true;
 }
 
-export { addEventListenerToCloseButton };
+export { 
+  addEventListenerToCloseButton, 
+  addEventListenerToSubmit
+};
