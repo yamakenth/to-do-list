@@ -77,7 +77,7 @@ class ToDoList {
     return newToDoList;
   }
   getItemById(idForSearch) {
-    const toDoItem;
+    let toDoItem = '';
     for (let i = 0; i < this.list.length; i++) {
       const currItem = this.list[i];
       if (currItem.id === idForSearch) {
