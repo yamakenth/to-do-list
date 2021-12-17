@@ -5,13 +5,17 @@ import {
   addEventListenerToDeleteButton,
   addEventListenrtToCheckbox
 } from './list-display-logic';
+import { createSidebar } from './sidebar';
 
 // cretate display of current to do list 
 // take in current list 
 // return no results 
 function createListDisplay(toDoList) {
-  // clear display before creating a new one 
-  clearCurrentDisplay();
+  // clear content section before creating a new one 
+  clearCurrentContent();
+
+  // create new sidebar based on current toDoList
+  createSidebar(toDoList);
 
   // > container
   const container = document.createElement('div');
@@ -43,10 +47,10 @@ function createListDisplay(toDoList) {
 // clear current display 
 // take in no parameters 
 // return no results 
-function clearCurrentDisplay() {
-  const display = document.querySelector('.display');
-  if (display) {
-    document.querySelector('.content').removeChild(display);
+function clearCurrentContent() {
+  const content = document.querySelector('.content');
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
   }
 }
 
