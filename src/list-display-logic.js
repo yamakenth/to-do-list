@@ -1,7 +1,7 @@
-import { updateList } from "./update-list";
-// details button on click, show form then update if input fields are changed 
-// take in no parameters 
+import { createListDisplay } from "./list-display";
 
+// details button on click, show form 
+// take in toDoList 
 // return no results 
 function addEventListenerToDetailsButton(toDoList) {
   const detetailButtons = document.querySelectorAll('.detail-button');
@@ -13,7 +13,6 @@ function addEventListenerToDetailsButton(toDoList) {
       populateForm(currItem, itemIndex);
     });
   });
-
 }
 
 // display from 
@@ -43,4 +42,21 @@ function populateForm(currItem, itemIndex) {
   document.querySelector('.new-item-form').dataset.itemIndex = itemIndex;
 }
 
-export { addEventListenerToDetailsButton };
+// delete button on click 
+// take in toDoList 
+// return no results 
+function addEventListenerToDeleteButton(toDoList) {
+  const deleteButtons = document.querySelectorAll('.delete-button');
+  deleteButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+      const itemIndex = e.target.parentNode.parentNode.parentNode.dataset.indexNumber;
+      toDoList.removeItemFromList(itemIndex);
+      createListDisplay(toDoList);
+    });
+  });
+}
+
+export { 
+  addEventListenerToDetailsButton,
+  addEventListenerToDeleteButton 
+};

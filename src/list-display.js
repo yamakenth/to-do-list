@@ -1,6 +1,9 @@
 import ViewDetailsIcon from './img/view-details.png';
 import RemoveIcon from './img/bin.png';
-import { addEventListenerToDetailsButton } from './list-display-logic';
+import { 
+  addEventListenerToDetailsButton, 
+  addEventListenerToDeleteButton 
+} from './list-display-logic';
 
 // cretate display of current to do list 
 // take in current list 
@@ -32,6 +35,7 @@ function createListDisplay(toDoList) {
 
   // addEventListener to buttons 
   addEventListenerToDetailsButton(toDoList);
+  addEventListenerToDeleteButton(toDoList);
 }
 
 // clear current display 
