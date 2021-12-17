@@ -9,17 +9,25 @@ function addEventListenerToNavElement(toDoList) {
     nav.addEventListener('click', (e) => {
       // grab name of nav
       const projectName = e.target.textContent;
-
+      
+      if (projectName === 'Home') {
+        createListDisplay(toDoList); 
+      } else if (projectName === 'Today') {
+        
+      } else if (projectName === 'This Week') {
+        
+      } else {
+        // get to do list of selected project
+        const grouopedToDoList = toDoList.groupByProject();
+        const currToDoList = grouopedToDoList[projectName];
+        
+        // create display of selected project 
+        createListDisplay(currToDoList);
+      }
+     
       // change display title 
       const toDoTitle = document.querySelector('.to-do-title');
       toDoTitle.textContent = projectName;
-
-      // get to do list of selected project
-      const grouopedToDoList = toDoList.groupByProject();
-      const currToDoList = grouopedToDoList[projectName];
-      
-      // create display of selected project 
-      createListDisplay(currToDoList);
     });
   });
 }
