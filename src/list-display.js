@@ -11,12 +11,9 @@ import { createSidebar } from './sidebar';
 // take in current list 
 // return no results 
 function createListDisplay(toDoList) {
-  // clear content section before creating a new one 
-  clearCurrentContent();
-
-  // create new sidebar based on current toDoList
-  createSidebar(toDoList);
-
+  // clear display section before creating a new one 
+  clearCurrentDisplay();
+  
   // > container
   const container = document.createElement('div');
   container.classList.add('display');
@@ -47,10 +44,10 @@ function createListDisplay(toDoList) {
 // clear current display 
 // take in no parameters 
 // return no results 
-function clearCurrentContent() {
-  const content = document.querySelector('.content');
-  while (content.firstChild) {
-    content.removeChild(content.firstChild);
+function clearCurrentDisplay() {
+  const display = document.querySelector('.display');
+  if (display) {
+    document.querySelector('.content').removeChild(display);
   }
 }
 
