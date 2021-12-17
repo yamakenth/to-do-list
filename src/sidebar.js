@@ -1,3 +1,5 @@
+import { addEventListenerToNavElement } from './sidebar-logic';
+
 // create sidebar 
 // take in no parameters 
 // return no results 
@@ -14,6 +16,9 @@ function createSidebar(toDoList) {
   container.append(allNav);
   container.append(projectNav);
   document.querySelector('.content').appendChild(container);
+
+  // addEventListener to nav h3 
+  addEventListenerToNavElement(toDoList);
 }
 
 // create nav for all project
