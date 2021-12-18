@@ -15,9 +15,7 @@ function addEventListenerToNavElement(toDoList) {
       // display/hide item divs 
       if (projectName === 'Home') {
         items.forEach((item) => {
-          if (item.dataset.project !== projectName) {
-            item.classList.remove('inactive');
-          }
+          item.classList.remove('inactive');
         });
       } else if (projectName === 'Today') {
         items.forEach((item) => {
