@@ -77,6 +77,7 @@ function createItemContainer(currItem) {
   itemContainer.classList.add('item');
   itemContainer.classList.add(`priority-${currItem.priority}`);
   itemContainer.dataset.itemId = currItem.id;
+  itemContainer.dataset.project = currItem.project;
 
   return itemContainer;
 }
