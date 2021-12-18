@@ -1,4 +1,5 @@
 import { createListDisplay } from "./list-display";
+import { getWeek, isToday, parseISO } from 'date-fns';
 
 // display different to do lists based on click 
 // take in no parameters 
@@ -18,9 +19,21 @@ function addEventListenerToNavElement(toDoList) {
           }
         });
       } else if (projectName === 'Today') {
-        // createListDisplay(toDoList.todaysToDoList());
+        const items = document.querySelectorAll('.item');
+        items.forEach((item) => {
+          item.classList.remove('inactive');
+          if (!isToday(parseISO(item.dataset.dueDate))) {
+            item.classList.add('inactive');
+          }
+        });
       } else if (projectName === 'This Week') {
-        // createListDisplay(toDoList.thisWeeksToDoList());
+        const items = document.querySelectorAll('.item');
+        items.forEach((item) => {
+          item.classList.remove('inactive');
+          if (getWeek(parseISO(item.dataset.dueDate)) !== getWeek(new Date())) {
+            item.classList.add('inactive');
+          }
+        });
       } else {
         const items = document.querySelectorAll('.item');
         items.forEach((item) => {
