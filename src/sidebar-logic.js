@@ -29,7 +29,6 @@ function addEventListenerToNavElement(toDoList) {
             item.classList.add('inactive');
           }
         });
-        
       }
      
       // change display title 
