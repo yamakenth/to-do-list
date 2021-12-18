@@ -47,7 +47,7 @@ function populateForm(currItem) {
 // take in toDoList 
 // return no results 
 function addEventListenerToDeleteButton(toDoList) {
-  const deleteButtons = document.querySelectorAll('.delete-button');
+  const deleteButtons = document.querySelectorAll('.delete-button > img');
   deleteButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
       const idToRemove = parseInt(e.target.parentNode.parentNode.parentNode.dataset.itemId);
