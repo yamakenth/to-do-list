@@ -44,20 +44,6 @@ class ToDoList {
       }
     }
   }
-  /*
-  groupByProject() {
-    const groupedToDoLists = {};
-    for (let i = 0; i < this.list.length; i++) {
-      const currItem = this.list[i];
-      const currProject = currItem.project;
-      if (!groupedToDoLists.hasOwnProperty(currProject)) {
-        groupedToDoLists[currProject] = new ToDoList();
-      }
-      groupedToDoLists[currProject].addItemToList(currItem);
-    }
-    return groupedToDoLists;
-  }
-  */
   getUniqueProjects() {
     const projects = this.list.map(obj => obj.project);
     return [...new Set(projects)];

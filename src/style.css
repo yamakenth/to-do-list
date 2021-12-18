@@ -297,29 +297,6 @@ body {
   transform: scale(1.1);
 }
 
-
-
-/*
-.content {
-  display: flex;
-  height: 100%;
+.item.inactive {
+  display: none;
 }
-
-.navbar {
-  background-color: #f3f3f3;
-  padding: 12px;
-  width: 25%;
-}
-
-.new-item-form.active {
-  transform: scale(1);
-}
-
-
-.form-buttons {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 10px;
-}
-*/

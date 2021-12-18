@@ -11,20 +11,25 @@ function addEventListenerToNavElement(toDoList) {
       const projectName = e.target.textContent;
       
       if (projectName === 'Home') {
-        createListDisplay(toDoList); 
+        const items = document.querySelectorAll('.item');
+        items.forEach((item) => {
+          if (item.dataset.project !== projectName) {
+            item.classList.remove('inactive');
+          }
+        });
       } else if (projectName === 'Today') {
-        createListDisplay(toDoList.todaysToDoList());
+        // createListDisplay(toDoList.todaysToDoList());
       } else if (projectName === 'This Week') {
-        createListDisplay(toDoList.thisWeeksToDoList());
+        // createListDisplay(toDoList.thisWeeksToDoList());
       } else {
-        /*
-        // get to do list of selected project
-        const grouopedToDoList = toDoList.groupByProject();
-        const currToDoList = grouopedToDoList[projectName];
-        // create display of selected project 
-        createListDisplay(currToDoList);
-        */
-        console.log('yeet');
+        const items = document.querySelectorAll('.item');
+        items.forEach((item) => {
+          item.classList.remove('inactive');
+          if (item.dataset.project !== projectName) {
+            item.classList.add('inactive');
+          }
+        });
+        
       }
      
       // change display title 
