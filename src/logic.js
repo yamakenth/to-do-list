@@ -44,6 +44,7 @@ class ToDoList {
       }
     }
   }
+  /*
   groupByProject() {
     const groupedToDoLists = {};
     for (let i = 0; i < this.list.length; i++) {
@@ -56,10 +57,12 @@ class ToDoList {
     }
     return groupedToDoLists;
   }
+  */
   getUniqueProjects() {
     const projects = this.list.map(obj => obj.project);
     return [...new Set(projects)];
   }
+  /*
   todaysToDoList() {
     const newToDoList = new ToDoList();
     const newArray = this.list.filter(obj => isToday(parseISO(obj.dueDate)));
@@ -76,6 +79,7 @@ class ToDoList {
     }
     return newToDoList;
   }
+  */
   getItemById(idForSearch) {
     let toDoItem = '';
     for (let i = 0; i < this.list.length; i++) {

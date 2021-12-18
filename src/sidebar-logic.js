@@ -17,11 +17,14 @@ function addEventListenerToNavElement(toDoList) {
       } else if (projectName === 'This Week') {
         createListDisplay(toDoList.thisWeeksToDoList());
       } else {
+        /*
         // get to do list of selected project
         const grouopedToDoList = toDoList.groupByProject();
         const currToDoList = grouopedToDoList[projectName];
         // create display of selected project 
         createListDisplay(currToDoList);
+        */
+        console.log('yeet');
       }
      
       // change display title 
