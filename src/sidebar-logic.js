@@ -1,4 +1,3 @@
-import { createListDisplay } from "./list-display";
 import { getWeek, isToday, parseISO } from 'date-fns';
 
 // display different to do lists based on click 
@@ -8,18 +7,19 @@ function addEventListenerToNavElement(toDoList) {
   const navs = document.querySelectorAll('.sidebar h3');
   navs.forEach((nav) => {
     nav.addEventListener('click', (e) => {
-      // grab name of nav
+      // get name of nav
       const projectName = e.target.textContent;
+      // get item divs 
+      const items = document.querySelectorAll('.item');
       
+      // display/hide item divs 
       if (projectName === 'Home') {
-        const items = document.querySelectorAll('.item');
         items.forEach((item) => {
           if (item.dataset.project !== projectName) {
             item.classList.remove('inactive');
           }
         });
       } else if (projectName === 'Today') {
-        const items = document.querySelectorAll('.item');
         items.forEach((item) => {
           item.classList.remove('inactive');
           if (!isToday(parseISO(item.dataset.dueDate))) {
@@ -27,7 +27,6 @@ function addEventListenerToNavElement(toDoList) {
           }
         });
       } else if (projectName === 'This Week') {
-        const items = document.querySelectorAll('.item');
         items.forEach((item) => {
           item.classList.remove('inactive');
           if (getWeek(parseISO(item.dataset.dueDate)) !== getWeek(new Date())) {
@@ -35,7 +34,6 @@ function addEventListenerToNavElement(toDoList) {
           }
         });
       } else {
-        const items = document.querySelectorAll('.item');
         items.forEach((item) => {
           item.classList.remove('inactive');
           if (item.dataset.project !== projectName) {
