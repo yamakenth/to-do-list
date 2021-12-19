@@ -1,51 +1,13 @@
 import { ToDoItem } from "./logic";
 
 // load data from local storage 
-// take in toDoList 
+// take in toDoList
 // return no results 
 function loadDataFromLocalStorage(toDoList) {
-  // localStorage.clear();
-  // if storage is empty then save to storage, otherwise load from storage 
   if (localStorage.length === 0) {
     console.log('localStorage is empty.');
-    populateStorage();
   } else {
-    console.log('importing data from local storage');
-    importFromStorage();
-  }
-
-  // send data to localStorage 
-  // take in no parameters 
-  // return no results 
-  function populateStorage() {
-    const item1 = {
-      title: 'Wash car',
-      project: 'Chores',
-      description: 'wash then wax car',
-      dueDate: '2021-12-19',
-      priority: 'low',
-      isCompleted: true,
-      id: 1639752209534
-    }
-    const item2 = {
-      title: 'English: Read 1983',
-      project: 'School',
-      description: 'finish chapter 2',
-      dueDate: '2021-12-16',
-      priority: 'medium',
-      isCompleted: false,
-      id: 1639752220578
-    }
-
-    const testData = [item1, item2]
-
-    localStorage.setItem('data', JSON.stringify(testData));
-  }
-
-  // import data from local storage 
-  // take in no parameters 
-  // return no results 
-  function importFromStorage() {
+    console.log('importing data from local storage...');
     const loadedData = JSON.parse(localStorage.getItem('data'));
     for (let i = 0; i < loadedData.length; i++) {
       const currItem = loadedData[i];
@@ -64,4 +26,13 @@ function loadDataFromLocalStorage(toDoList) {
   }
 }
 
-export { loadDataFromLocalStorage };
+// rewrite data everytime form is submitted, item is deleted, or completion status is toggled 
+// take in toDoList 
+// return no results 
+function saveDataToLocalStorage(toDoList) {
+  console.log('saving data to local storage...');
+  localStorage.clear();
+  localStorage.setItem('data', JSON.stringify(toDoList.list));
+}
+
+export { loadDataFromLocalStorage, saveDataToLocalStorage };

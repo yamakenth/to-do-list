@@ -14,10 +14,10 @@ import './style.css';
 const toDoList = new ToDoList();
 
 // test 
-// loadDataFromLocalStorage(toDoList);
+loadDataFromLocalStorage(toDoList);
 
 // load existing data then update toDoList 
-loadData(toDoList); 
+// loadData(toDoList); 
 // console.log(JSON.stringify(toDoList.list));
 
 // create header 

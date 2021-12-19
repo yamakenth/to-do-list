@@ -1,6 +1,7 @@
 import { updateList } from './update-list';
 import { createListDisplay } from './list-display';
 import { createSidebar } from './sidebar';
+import { saveDataToLocalStorage } from './storage';
 
 // close form on click 
 // take in no parameters 
@@ -23,6 +24,7 @@ function addEventListenerToSubmit(toDoList) {
     closeForm();
     createListDisplay(toDoList);
     createSidebar(toDoList);
+    saveDataToLocalStorage(toDoList);
   });
 }
 

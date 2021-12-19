@@ -1,5 +1,6 @@
 import { createListDisplay } from "./list-display";
 import { createSidebar } from "./sidebar";
+import { saveDataToLocalStorage } from "./storage";
 
 // details button on click, show form 
 // take in toDoList 
@@ -54,6 +55,7 @@ function addEventListenerToDeleteButton(toDoList) {
       toDoList.removeItemFromList(idToRemove);
       createListDisplay(toDoList);
       createSidebar(toDoList);
+      saveDataToLocalStorage(toDoList);
     });
   });
 }
@@ -70,6 +72,7 @@ function addEventListenrtToCheckbox(toDoList) {
       const itemId = parseInt(e.target.parentNode.parentNode.dataset.itemId);
       const currItem = toDoList.getItemById(itemId);
       currItem.toggleIsCompleted();
+      saveDataToLocalStorage(toDoList);
     });
   });
 }
