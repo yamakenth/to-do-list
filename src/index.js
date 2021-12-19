@@ -1,5 +1,4 @@
 import { ToDoList } from './logic';
-import { loadData } from './load-data';
 import { createHeader } from './header';
 import { createContent } from './content';
 import { createSidebar } from './sidebar';
@@ -11,20 +10,12 @@ import './style.css';
 
 // create new list 
 const toDoList = new ToDoList();
-
-// create header 
-createHeader();
-// create content area for flex 
-createContent();
-// load and display dummy data when button is clicked 
-const logo = document.querySelector('.header img');
-logo.addEventListener('click', () => {
-  loadData(toDoList);
-  createListDisplay(toDoList);
-}); 
 // load data from local storage on app startup
 loadDataFromLocalStorage(toDoList);
-
+// create header 
+createHeader(toDoList);
+// create content area for flex 
+createContent();
 // create sidebar
 createSidebar(toDoList);
 // create display from loaded data 

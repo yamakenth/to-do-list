@@ -1,9 +1,10 @@
 import Logo from './img/check-box.png';
+import { addEventListenerToDummyDataButton } from './header-logic';
 
 // create page header 
 // take in no parameters 
 // return no results 
-function createHeader() {
+function createHeader(toDoList) {
   // > header div 
   const headerContainer = document.createElement('div');
   headerContainer.classList.add('header');
@@ -15,8 +16,10 @@ function createHeader() {
   // append child to parent 
   headerContainer.appendChild(leftContainer);
   headerContainer.appendChild(rightContainer);
-  
   document.querySelector('body').appendChild(headerContainer);
+  
+  // addEventListener to dummy data button 
+  addEventListenerToDummyDataButton(toDoList);
 }
 
 // create left container 
