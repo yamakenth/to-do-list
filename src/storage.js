@@ -1,4 +1,5 @@
 import { ToDoItem } from "./logic";
+import { format } from 'date-fns';
 
 // load data from local storage 
 // take in toDoList
@@ -6,6 +7,12 @@ import { ToDoItem } from "./logic";
 function loadDataFromLocalStorage(toDoList) {
   if (localStorage.length === 0) {
     console.log('localStorage is empty.');
+    // add example item 
+    const exampleItem = new ToDoItem(
+      'New To Do', 'New Project', 'Description/Notes for to do item', 
+      format(new Date(), 'yyyy-MM-dd'), 'medium'
+    );
+    toDoList.addItemToList(exampleItem);
   } else {
     console.log('importing data from local storage...');
     const loadedData = JSON.parse(localStorage.getItem('data'));
