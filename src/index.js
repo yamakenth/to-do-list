@@ -9,21 +9,22 @@ import { createFormPage } from './form';
 import { loadDataFromLocalStorage } from './storage';
 import './style.css';
 
-
 // create new list 
 const toDoList = new ToDoList();
-
-// test 
-loadDataFromLocalStorage(toDoList);
-
-// load existing data then update toDoList 
-// loadData(toDoList); 
-// console.log(JSON.stringify(toDoList.list));
 
 // create header 
 createHeader();
 // create content area for flex 
 createContent();
+// load and display dummy data when button is clicked 
+const logo = document.querySelector('.header img');
+logo.addEventListener('click', () => {
+  loadData(toDoList);
+  createListDisplay(toDoList);
+}); 
+// load data from local storage on app startup
+loadDataFromLocalStorage(toDoList);
+
 // create sidebar
 createSidebar(toDoList);
 // create display from loaded data 
