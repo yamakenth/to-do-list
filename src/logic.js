@@ -2,14 +2,14 @@
 // properties: title, project, description, dueDate, priority, isCompleted, id
 // methods: toggeIsCompleted
 class ToDoItem {
-  constructor(title, project, description, dueDate, priority) {
+  constructor(title, project, description, dueDate, priority, isCompleted = false, id = new Date().getTime()) {
     this.title = title;
     this.project = project;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
-    this.isCompleted = false;
-    this.id = new Date().getTime();
+    this.isCompleted = isCompleted;
+    this.id = id;
   }
   toggleIsCompleted() {
     (this.isCompleted) ? this.isCompleted = false : this.isCompleted = true;

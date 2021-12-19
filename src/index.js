@@ -6,12 +6,20 @@ import { createSidebar } from './sidebar';
 import { createListDisplay } from './list-display';
 import { createAddButton } from './add-button';
 import { createFormPage } from './form';
+import { loadDataFromLocalStorage } from './storage';
 import './style.css';
+
 
 // create new list 
 const toDoList = new ToDoList();
+
+// test 
+// loadDataFromLocalStorage(toDoList);
+
 // load existing data then update toDoList 
 loadData(toDoList); 
+// console.log(JSON.stringify(toDoList.list));
+
 // create header 
 createHeader();
 // create content area for flex 
