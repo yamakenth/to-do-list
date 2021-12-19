@@ -17,8 +17,25 @@ body {
   display: flex;
   padding: 12px;
   align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header > .left-container {
+  display: flex;
+  align-items: center;
   justify-content: flex-start;
   gap: 12px;
+}
+
+.dummy-data-button {
+  width: 120px;
+  padding: 4px 8px;
+  font-size: 13px;
+  color: #ffffff;
+  background: none;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
 }
 
 .logo {
